@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca2ff846229647647bf489069534f9a6, type: 3}
   m_Name: CarrotSeeds
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 0}
-  seedSprite: {fileID: 0}
-  seedStage: {fileID: 0}
-  grownStage: {fileID: 0}
-  deadStage: {fileID: 0}
-  grownItem: {fileID: 0}
+  itemSprite: {fileID: 21300000, guid: bcf68daa6a2c46f4c9fbcf7c73125e16, type: 3}
+  seedStage: {fileID: 21300000, guid: 6586672af2f2a1d42b10216cbc4ecb21, type: 3}
+  grownStage: {fileID: 21300000, guid: 151424dd5b1aedd488abafcb329ea58e, type: 3}
+  deadStage: {fileID: -3541834622323829016, guid: 4c1eae98b791aeb41a5a1ec4727510a0,
+    type: 3}
+  grownItem: {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
