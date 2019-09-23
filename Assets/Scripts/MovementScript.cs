@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
+    float speed = 0.02f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,16 +29,19 @@ public class MovementScript : MonoBehaviour
         Vector2 targetPosition = Get2DMousePosition();
         Vector2 originalPosition = transform.position;
         Vector2 directionVector = targetPosition - originalPosition;
+        directionVector.Normalize();
         while (!ProximityCheck(transform.position, targetPosition))
         {
-            transform.position = AddVector(transform.position, (directionVector/100));
+            transform.position = AddVector(transform.position, (directionVector * speed));
             yield return null;
         }
         yield return null;
     }
     bool ProximityCheck(Vector2 a, Vector2 b)
     {
-        if (Vector2.Distance(a, b) < 0.01f)
+        // We make the proximity check twice the speed because this gives a few frames for the check to hit
+        // Not the best approach, I know.
+        if (Vector2.Distance(a, b) < (speed * 2))
         {
             return true;
         }
