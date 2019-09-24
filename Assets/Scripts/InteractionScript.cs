@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class InteractionScript : MonoBehaviour
 {
-    public Item currentItem = null;
     public SpriteRenderer carryRend;
+
+   private void Start()
+    {
+        PlayerItem.Instance.DestroyItem();
+    }
 
     private void Update()
     {
@@ -24,20 +28,20 @@ public class InteractionScript : MonoBehaviour
             {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 interactable.Interact();
+                UpdateCurrentItemRend();
             }
         }
     }
 
-    void PickupItem(Item newItem)
+    void UpdateCurrentItemRend()
     {
-        currentItem = newItem;
-        carryRend.sprite = currentItem.itemSprite;
+        if (PlayerItem.Instance.CurrentItem != null)
+            carryRend.sprite = PlayerItem.Instance.CurrentItem.itemSprite;
+        else
+        {
+            carryRend.sprite = null;
+            Debug.Log("No Item Found");
+        }
         
-    }
-
-    void DestroyCurrentItem()
-    {
-        if (currentItem != null)
-            currentItem = null;
     }
 }

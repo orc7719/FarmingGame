@@ -7,13 +7,35 @@ public class CropTile : MonoBehaviour, IInteractable
     [SerializeField] Seed currentCrop;
     TileState currentState;
 
-    [SerializeField] SpriteRenderer spriteRend;
+    [SerializeField] SpriteRenderer statusRend;
+    Sprite[] statusSprites;
 
-    public Sprite dirtSprite;
-    public Sprite wateredSprite;
+    SpriteRenderer spriteRend;
 
-    float growthTimer;
-    float spoilTimer;
+    Sprite dirtSprite;
+    Sprite wateredSprite;
+
+    float plantedTime;
+
+    private void Awake()
+    {
+        GetResources();
+
+        spriteRend = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        
+        UpdateCropSprite();
+    }
+
+    void GetResources()
+    {
+        dirtSprite = GameManager.Resources.dirtTile;
+        wateredSprite = GameManager.Resources.wateredTile;
+        statusSprites = GameManager.Resources.statusIcons;
+    }
 
     public void Interact()
     {
@@ -31,7 +53,7 @@ public class CropTile : MonoBehaviour, IInteractable
                     currentCrop = (Seed)PlayerItem.Instance.CurrentItem;
                     PlayerItem.Instance.DestroyItem();
                     currentState = TileState.Planted;
-                    growthTimer = Time.time;
+                    plantedTime = Time.time;
                 }
                 break;
             case TileState.Planted:
@@ -41,6 +63,7 @@ public class CropTile : MonoBehaviour, IInteractable
                 break;
             case TileState.Dead:
                 currentState = TileState.Dirt;
+                currentCrop = null;
                 break;
             default:
                 break;
@@ -68,20 +91,26 @@ public class CropTile : MonoBehaviour, IInteractable
     {
         if(currentState == TileState.Planted)
         {
-            if (Time.time >= growthTimer + 10)
+            if (Time.time >= plantedTime + GameManager.Settings.cropGrowTime )
             {
                 currentState = TileState.Grown;
-                spoilTimer = Time.time;
                 UpdateCropSprite();
+                statusRend.sprite = statusSprites[0];
             }
             
         }
         else if (currentState == TileState.Grown)
         {
-            if(Time.time >= spoilTimer + 10)
+
+            if(Time.time >= plantedTime + GameManager.Settings.cropSpoilTime)
             {
                 currentState = TileState.Dead;
+                statusRend.sprite = statusSprites[2];
                 UpdateCropSprite();
+            }
+            else if (Time.time >= plantedTime + ((GameManager.Settings.cropSpoilTime + GameManager.Settings.cropGrowTime) / 2))
+            {
+                statusRend.sprite = statusSprites[1];
             }
         }
     }
@@ -92,9 +121,11 @@ public class CropTile : MonoBehaviour, IInteractable
         {
             case TileState.Dirt:
                 spriteRend.sprite = dirtSprite;
+                statusRend.sprite = null;
                 break;
             case TileState.Watered:
                 spriteRend.sprite = wateredSprite;
+                statusRend.sprite = null;
                 break;
             case TileState.Planted:
                 spriteRend.sprite = currentCrop.seedStage;
