@@ -1,13 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class MovementScript : MonoBehaviour
 {
     float speed = 0.02f;
+    AIPath ai;
     // Start is called before the first frame update
     void Start()
     {
+        ai = GetComponent<AIPath>();
     }
     // Update is called once per frame
     void Update()
@@ -15,8 +18,9 @@ public class MovementScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("left click detected");
-            StopCoroutine("CharacterMovement");
-            StartCoroutine("CharacterMovement");
+            ai.destination = Get2DMousePosition();
+            //StopCoroutine("CharacterMovement");
+            //StartCoroutine("CharacterMovement");
         }
     }
     Vector2 Get2DMousePosition()
