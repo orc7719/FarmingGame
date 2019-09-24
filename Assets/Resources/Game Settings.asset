@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Game Settings
   m_EditorClassIdentifier: 
   cropGrowTime: 4
-  cropSpoilTime: 10
+  cropSpoilTime: 15
+  interactDistance: 2
