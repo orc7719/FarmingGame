@@ -6,12 +6,14 @@ using Pathfinding;
 public class MovementBobbleScript : MonoBehaviour
 {
     AIPath ai;
-    float bobbleRate = 1f;
+    float bobbleRate = 0.6f;
     int angleToBobble = 10;
-    bool haventRecentlyReset = true;
+    bool haventRecentlyReset = false;
+    AudioSource footsteps;
     void Start()
     {
         ai = GetComponentInParent<AIPath>();
+        footsteps = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -19,6 +21,7 @@ public class MovementBobbleScript : MonoBehaviour
         {
             if (!haventRecentlyReset)
             {
+                footsteps.Play();
                 haventRecentlyReset = true;
             }
             Vector3 currentEuler = transform.localEulerAngles;
@@ -36,12 +39,12 @@ public class MovementBobbleScript : MonoBehaviour
         if (ai.reachedDestination && haventRecentlyReset)
         {
             ResetRotation();
-            haventRecentlyReset = false;
         }
     }
     void ResetRotation()
     {
-        Debug.Log("reset spam");
         transform.localRotation = Quaternion.Euler(0, 0, 0);
+        haventRecentlyReset = false;
+        footsteps.Stop();
     }
 }
