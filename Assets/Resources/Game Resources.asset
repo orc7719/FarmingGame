@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ffb0e36b494cd4bb1476650b5dd3fb, type: 3}
   m_Name: Game Resources
   m_EditorClassIdentifier: 
-  dirtTile: {fileID: 21300000, guid: 70c44436b0f92114b96907d1b58469f8, type: 3}
-  wateredTile: {fileID: 21300000, guid: d605304ad9e986d4aaf2d312aafa1a61, type: 3}
+  dirtTile: {fileID: 21300000, guid: b70e172b408c4bf48aabdb6e62d06175, type: 3}
+  wateredTile: {fileID: 21300000, guid: ca93526212687f841a986c0a7fa234fb, type: 3}
   statusIcons:
   - {fileID: 21300000, guid: 2363df2751d983347916cf6ff54a6793, type: 3}
   - {fileID: 21300000, guid: 92c4b900b71a5c34ab6b15f8c983c1af, type: 3}

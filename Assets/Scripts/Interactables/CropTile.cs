@@ -11,6 +11,7 @@ public class CropTile : MonoBehaviour, IInteractable
     Sprite[] statusSprites;
 
     SpriteRenderer spriteRend;
+    [SerializeField] SpriteRenderer cropRend;
 
     Sprite dirtSprite;
     Sprite wateredSprite;
@@ -122,19 +123,24 @@ public class CropTile : MonoBehaviour, IInteractable
             case TileState.Dirt:
                 spriteRend.sprite = dirtSprite;
                 statusRend.sprite = null;
+                cropRend.sprite = null;
                 break;
             case TileState.Watered:
                 spriteRend.sprite = wateredSprite;
                 statusRend.sprite = null;
+                cropRend.sprite = null;
                 break;
             case TileState.Planted:
-                spriteRend.sprite = currentCrop.seedStage;
+                spriteRend.sprite = wateredSprite;
+                cropRend.sprite = currentCrop.seedStage;
                 break;
             case TileState.Grown:
-                spriteRend.sprite = currentCrop.grownStage;
+                spriteRend.sprite = dirtSprite;
+                cropRend.sprite = currentCrop.grownStage;
                 break;
             case TileState.Dead:
-                spriteRend.sprite = currentCrop.deadStage;
+                spriteRend.sprite = dirtSprite;
+                cropRend.sprite = currentCrop.deadStage;
                 break;
             default:
                 break;

@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b216d561ef23e48b699120f1513750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedItem: {fileID: 11400000, guid: 08e23ea6d61e8f440b88bcf136805314, type: 2}
+  seedItem: {fileID: 11400000, guid: 475dc22fea3912742b5bcccce469ad1e, type: 2}
 --- !u!61 &749615297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -469,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCrop: {fileID: 0}
   statusRend: {fileID: 1107088537}
+  cropRend: {fileID: 1978423552}
 --- !u!212 &936037602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1159,7 +1160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
