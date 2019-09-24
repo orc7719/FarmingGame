@@ -135,7 +135,7 @@ public class CropTile : MonoBehaviour, IInteractable
                 cropRend.sprite = currentCrop.seedStage;
                 break;
             case TileState.Grown:
-                spriteRend.sprite = dirtSprite;
+                spriteRend.sprite = wateredSprite;
                 cropRend.sprite = currentCrop.grownStage;
                 break;
             case TileState.Dead:

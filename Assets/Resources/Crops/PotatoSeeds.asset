@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2ff846229647647bf489069534f9a6, type: 3}
-  m_Name: CarrotSeeds
+  m_Name: PotatoSeeds
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: bcf68daa6a2c46f4c9fbcf7c73125e16, type: 3}
-  seedStage: {fileID: 21300000, guid: 3ef8f1f5a1d40084fb7be1787c25403f, type: 3}
-  grownStage: {fileID: 21300000, guid: c4c8ff7f309186a48928e17076bec9e9, type: 3}
-  deadStage: {fileID: 21300000, guid: 9fbb934c5533379489523d062390cbe1, type: 3}
-  grownItem: {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
+  seedStage: {fileID: 21300000, guid: f4e9e65820e54bb4c88202198c01628c, type: 3}
+  grownStage: {fileID: 21300000, guid: 2c51f5b148a88fa40a552b7a388f803d, type: 3}
+  deadStage: {fileID: 21300000, guid: ef6fec71a40234447ab46ac57e001377, type: 3}
+  grownItem: {fileID: 11400000, guid: 1b8bb053bab43384d9345330147678cd, type: 2}

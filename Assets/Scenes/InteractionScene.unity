@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b216d561ef23e48b699120f1513750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedItem: {fileID: 11400000, guid: 475dc22fea3912742b5bcccce469ad1e, type: 2}
+  seedItem: {fileID: 11400000, guid: 08e23ea6d61e8f440b88bcf136805314, type: 2}
 --- !u!61 &749615297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -805,7 +805,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2589,7 +2589,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4632,7 +4632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &1859302872
 Grid:
   m_ObjectHideFlags: 0

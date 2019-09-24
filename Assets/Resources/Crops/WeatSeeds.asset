@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2ff846229647647bf489069534f9a6, type: 3}
+  m_Name: ExampleSeed
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 21300000, guid: 79e884383040d154fb5a21a38ff9b346, type: 3}
+  seedStage: {fileID: 21300000, guid: 35c95ef103d72624a99fd7044d87fb6b, type: 3}
+  grownStage: {fileID: 21300000, guid: 72d8fa2541d67504f9bae5870f7a829a, type: 3}
+  deadStage: {fileID: 21300000, guid: e980792a85001eb4fae059684761d73a, type: 3}
+  grownItem: {fileID: 11400000, guid: cfc0f6680dc6e3141a1e8e5184a2d92f, type: 2}
