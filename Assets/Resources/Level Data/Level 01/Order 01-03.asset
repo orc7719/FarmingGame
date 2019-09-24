@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75d58128c56b06840815a2f53200ff4a, type: 3}
-  m_Name: Order 01-02
+  m_Name: Order 01-03
   m_EditorClassIdentifier: 
   DeveloperDescription:
     _value: 
   _list:
+  - {fileID: 11400000, guid: e67a10a3880b02b4784761f221fd48a5, type: 2}
   - {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
-  - {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
+  - {fileID: 11400000, guid: e67a10a3880b02b4784761f221fd48a5, type: 2}

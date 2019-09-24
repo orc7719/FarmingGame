@@ -151,11 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a0ac5cbadcaef64182962986a4d3039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cropOrder:
-  - {fileID: 11400000, guid: cfc0f6680dc6e3141a1e8e5184a2d92f, type: 2}
-  - {fileID: 11400000, guid: cfc0f6680dc6e3141a1e8e5184a2d92f, type: 2}
-  - {fileID: 11400000, guid: cfc0f6680dc6e3141a1e8e5184a2d92f, type: 2}
   orderComplete: {fileID: 11400000, guid: 0beb9bdd7a141d84c8f01ab0826f32b9, type: 2}
+  levelOrders: []
+  cropOrder: []
 --- !u!61 &94420861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -692,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b216d561ef23e48b699120f1513750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedItem: {fileID: 11400000, guid: 02e15872a749e3a418097b809b10ca6a, type: 2}
+  seedItem: {fileID: 11400000, guid: 9f7b5c268fd50064490a5f234ff18f2d, type: 2}
 --- !u!61 &749615297
 BoxCollider2D:
   m_ObjectHideFlags: 0
