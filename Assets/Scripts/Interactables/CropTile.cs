@@ -23,6 +23,7 @@ public class CropTile : MonoBehaviour, IInteractable
         GetResources();
 
         spriteRend = GetComponent<SpriteRenderer>();
+        ToggleHighlight(false);
     }
 
     private void Start()
@@ -150,6 +151,18 @@ public class CropTile : MonoBehaviour, IInteractable
     public bool isInteractable()
     {
         return true;
+    }
+
+    public void ToggleHighlight(bool newValue)
+    {
+        if (newValue)
+        {
+            spriteRend.material.SetColor("_Color", Color.white);
+        }
+        else
+        {
+            spriteRend.material.SetColor("_Color", Color.clear);
+        }
     }
 }
 

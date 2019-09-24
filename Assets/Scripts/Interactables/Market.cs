@@ -7,6 +7,7 @@ public class Market : MonoBehaviour, IInteractable
 {
     public GameEvent orderComplete;
     int completedOrders = 0;
+    SpriteRenderer rend;
 
     public CropCollection[] levelOrders;
     public List<Crop> cropOrder = new List<Crop>();
@@ -15,6 +16,9 @@ public class Market : MonoBehaviour, IInteractable
 
     void Start()
     {
+        rend = GetComponent<SpriteRenderer>();
+        ToggleHighlight(false);
+
         GetNewOrder();
     }
 
@@ -75,5 +79,17 @@ public class Market : MonoBehaviour, IInteractable
     public bool isInteractable()
     {
         return true;
+    }
+
+    public void ToggleHighlight(bool newValue)
+    {
+        if (newValue)
+        {
+            rend.material.SetColor("_Color", Color.white);
+        }
+        else
+        {
+            rend.material.SetColor("_Color", Color.clear);
+        }
     }
 }

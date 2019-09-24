@@ -41,6 +41,9 @@ public class InteractionScript : MonoBehaviour
             if(ai.reachedEndOfPath)
             {
                 interactTarget.Interact();
+                if (interactTarget != null)
+                    interactTarget.ToggleHighlight(false);
+                interactTarget = null;
                 UpdateCurrentItemRend();
                 hasTarget = false;
             }
@@ -55,12 +58,18 @@ public class InteractionScript : MonoBehaviour
 
         Vector2 moveTarget;
 
+        if (interactTarget != null)
+            interactTarget.ToggleHighlight(false);
+
         if (hit.collider != null)
         {
             if (hit.collider.GetComponent<IInteractable>() != null)
             {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+
                 interactTarget = interactable;
+                if (interactTarget != null)
+                    interactTarget.ToggleHighlight(true);
             }
 
                 moveTarget = hit.point;
