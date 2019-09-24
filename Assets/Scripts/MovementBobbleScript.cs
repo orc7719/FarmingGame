@@ -17,7 +17,7 @@ public class MovementBobbleScript : MonoBehaviour
     }
     void Update()
     {
-        if ((ai.velocity.magnitude > 0) && !ai.reachedDestination)
+        if ((ai.velocity.magnitude > 0) && !ai.reachedEndOfPath)
         {
             if (!haventRecentlyReset)
             {
@@ -36,7 +36,7 @@ public class MovementBobbleScript : MonoBehaviour
             z += bobbleRate;
             transform.localRotation = Quaternion.Euler(new Vector3(0, 0, z));
         }
-        if (ai.reachedDestination && haventRecentlyReset)
+        if (ai.reachedEndOfPath && haventRecentlyReset)
         {
             ResetRotation();
         }
