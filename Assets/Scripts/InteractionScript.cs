@@ -14,10 +14,14 @@ public class InteractionScript : MonoBehaviour
     AIPath ai;
     float pathWait;
 
+    AudioSource audioSource;
+
     private void Start()
     {
         PlayerItem.Instance.DestroyItem();
         ai = GetComponent<AIPath>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -93,7 +97,10 @@ public class InteractionScript : MonoBehaviour
     void UpdateCurrentItemRend()
     {
         if (PlayerItem.Instance.CurrentItem != null)
+        {
             carryRend.sprite = PlayerItem.Instance.CurrentItem.itemSprite;
+            audioSource.PlayOneShot(PlayerItem.Instance.CurrentItem.pickupSound);
+        }
         else
         {
             carryRend.sprite = null;

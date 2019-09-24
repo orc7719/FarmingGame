@@ -6,6 +6,7 @@ public class SeedBin : MonoBehaviour, IInteractable
 {
     public Seed seedItem;
     SpriteRenderer rend;
+    [SerializeField] SpriteRenderer binIcon;
 
     public void Interact()
     {
@@ -21,6 +22,8 @@ public class SeedBin : MonoBehaviour, IInteractable
     {
         rend = GetComponent<SpriteRenderer>();
         ToggleHighlight(false);
+
+        binIcon.sprite = seedItem.grownItem.itemSprite;
     }
 
     public void ToggleHighlight(bool newValue)

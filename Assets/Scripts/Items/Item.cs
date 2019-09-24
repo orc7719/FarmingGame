@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class Item : ScriptableObject
 {
     public Sprite itemSprite;
+    public AudioClip pickupSound;
 }
