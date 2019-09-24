@@ -12,6 +12,7 @@ public class InteractionScript : MonoBehaviour
     float interactDistance;
 
     AIPath ai;
+    float pathWait;
 
     private void Start()
     {
@@ -35,13 +36,9 @@ public class InteractionScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             ScreenMouseRay();
 
-        if(hasTarget)
+        if(hasTarget && Time.time >= pathWait + 0.1f)
         {
-            if (ai.pathPending || !ai.reachedEndOfPath)
-            {
-                
-            }
-            else
+            if(ai.reachedEndOfPath)
             {
                 interactTarget.Interact();
                 UpdateCurrentItemRend();
@@ -60,13 +57,14 @@ public class InteractionScript : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if(hit.collider.GetComponent<IInteractable>() != null)
+            if (hit.collider.GetComponent<IInteractable>() != null)
             {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 interactTarget = interactable;
             }
 
-            moveTarget = hit.point;
+                moveTarget = hit.point;
+
         }
         else
         {
@@ -74,6 +72,7 @@ public class InteractionScript : MonoBehaviour
         }
 
         ai.destination = moveTarget;
+        pathWait = Time.time;
     }
 
     Vector2 Get2DMousePosition()
