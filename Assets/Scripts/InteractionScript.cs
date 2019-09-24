@@ -37,7 +37,11 @@ public class InteractionScript : MonoBehaviour
 
         if(hasTarget)
         {
-            if(ai.reachedDestination)
+            if (ai.pathPending || !ai.reachedEndOfPath)
+            {
+                
+            }
+            else
             {
                 interactTarget.Interact();
                 UpdateCurrentItemRend();
