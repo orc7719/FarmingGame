@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca2ff846229647647bf489069534f9a6, type: 3}
-  m_Name: CarrotSeeds
+  m_Name: BeetSeeds
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: bcf68daa6a2c46f4c9fbcf7c73125e16, type: 3}
-  seedStage: {fileID: 21300000, guid: 3ef8f1f5a1d40084fb7be1787c25403f, type: 3}
-  grownStage: {fileID: 21300000, guid: c4c8ff7f309186a48928e17076bec9e9, type: 3}
-  deadStage: {fileID: 21300000, guid: 9fbb934c5533379489523d062390cbe1, type: 3}
-  grownItem: {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
+  itemSprite: {fileID: 21300000, guid: 67fc668a7e3939348981a0cf690b92c4, type: 3}
+  seedStage: {fileID: 21300000, guid: a071a6f0829c9b447a6c42e16901cc61, type: 3}
+  grownStage: {fileID: 21300000, guid: df9d34d8c42378e45838dc5611fd2a35, type: 3}
+  deadStage: {fileID: 21300000, guid: 413cac7b622e0a84993a32cea0121a21, type: 3}
+  grownItem: {fileID: 11400000, guid: 92d2708bc1a62a9498d1e28b1e531f3e, type: 2}

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbc9087b018b89c49befce65d1cbe376, type: 3}
-  m_Name: Watering Can
+  m_Name: Water Bucket
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: 58711ad5c77d76f4abe9439f7a352935, type: 3}
+  itemSprite: {fileID: 21300000, guid: 631564b5d0d0f84498777a5d41f3a46a, type: 3}
