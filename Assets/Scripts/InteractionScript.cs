@@ -36,7 +36,7 @@ public class InteractionScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             ScreenMouseRay();
 
-        if(hasTarget && Time.time >= pathWait + 0.5f)
+        if(hasTarget && Time.time >= pathWait + 0.1f)
         {
             if(ai.reachedEndOfPath)
             {
@@ -57,13 +57,14 @@ public class InteractionScript : MonoBehaviour
 
         if (hit.collider != null)
         {
-            if(hit.collider.GetComponent<IInteractable>() != null)
+            if (hit.collider.GetComponent<IInteractable>() != null)
             {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                 interactTarget = interactable;
             }
 
-            moveTarget = hit.point;
+                moveTarget = hit.point;
+
         }
         else
         {
