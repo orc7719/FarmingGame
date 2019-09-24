@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class Market : MonoBehaviour, IInteractable
 {
     public List<Crop> cropOrder = new List<Crop>();
-
+    public GameEvent orderComplete;
 
     public void Interact()
     {
@@ -23,7 +24,8 @@ public class Market : MonoBehaviour, IInteractable
 
     void CheckCurrentOrder()
     {
-
+        if (cropOrder.Count <= 0)
+            orderComplete.Raise();
     }
 
     public bool isInteractable()

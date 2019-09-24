@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3163589653
+    locked: 0
+  - name: Crop
+    uniqueID: 2828905545
+    locked: 0
+  - name: Character
+    uniqueID: 4281945381
+    locked: 0
