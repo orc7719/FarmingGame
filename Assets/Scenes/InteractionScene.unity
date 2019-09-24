@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b216d561ef23e48b699120f1513750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedItem: {fileID: 11400000, guid: 08e23ea6d61e8f440b88bcf136805314, type: 2}
+  seedItem: {fileID: 11400000, guid: 02e15872a749e3a418097b809b10ca6a, type: 2}
 --- !u!61 &749615297
 BoxCollider2D:
   m_ObjectHideFlags: 0
