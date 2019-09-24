@@ -10,7 +10,7 @@ public class Market : MonoBehaviour, IInteractable
     SpriteRenderer rend;
 
     public CropCollection[] levelOrders;
-    public List<Crop> cropOrder = new List<Crop>();
+    List<Crop> cropOrder = new List<Crop>();
 
     Sprite[] orderSprites;
 
