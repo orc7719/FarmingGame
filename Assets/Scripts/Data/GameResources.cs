@@ -9,4 +9,7 @@ public class GameResources : ScriptableSingleton<GameResources>
     public Sprite dirtTile;
     public Sprite wateredTile;
     public Sprite[] statusIcons;
+
+    [Header("Crop Data")]
+    public CropCollection allCrops;
 }
