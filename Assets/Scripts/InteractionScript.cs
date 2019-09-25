@@ -87,6 +87,8 @@ public class InteractionScript : MonoBehaviour
             {
                 IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
+                moveTarget = hit.collider.ClosestPoint(transform.position);
+
                 interactTarget = interactable;
                 if (interactTarget != null)
                     interactTarget.ToggleHighlight(true);
@@ -99,7 +101,7 @@ public class InteractionScript : MonoBehaviour
                 interactTarget = null;
             }
 
-            moveTarget = hit.collider.ClosestPoint(transform.position);
+            
         }
         else
         {
