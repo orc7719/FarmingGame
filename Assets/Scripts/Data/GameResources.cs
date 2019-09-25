@@ -12,4 +12,7 @@ public class GameResources : ScriptableSingleton<GameResources>
 
     [Header("Crop Data")]
     public CropCollection allCrops;
+
+    [Header("Level Data")]
+    public SceneReferenceCollection allLevels;
 }

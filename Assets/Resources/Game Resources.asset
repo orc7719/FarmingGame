@@ -19,3 +19,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 92c4b900b71a5c34ab6b15f8c983c1af, type: 3}
   - {fileID: 21300000, guid: 944945b0d31cf654e83f19ca641a12db, type: 3}
   allCrops: {fileID: 11400000, guid: d94fb9cdf46f68749afc9d42f64ee307, type: 2}
+  allLevels: {fileID: 11400000, guid: cdeaabc94804d5b4bb7307601cb2f7c2, type: 2}
