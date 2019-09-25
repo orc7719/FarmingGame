@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class TrashCan : MonoBehaviour, IInteractable
 {
     SpriteRenderer rend;
+    [SerializeField] GameEvent interactEvent;
 
     public void Interact()
     {
         PlayerItem.Instance.DestroyItem();
+        interactEvent.Raise();
     }
 
     public bool isInteractable()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using ScriptableObjectArchitecture;
 
 public class InteractionScript : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class InteractionScript : MonoBehaviour
     float pathWait;
 
     AudioSource audioSource;
+
+    [SerializeField] GameEvent clickEvent;
+    [SerializeField] GameEvent clickInteractEvent;
 
     private void Start()
     {
@@ -59,6 +63,8 @@ public class InteractionScript : MonoBehaviour
 
     public void ScreenMouseRay()
     {
+        clickEvent.Raise();
+
         hasTarget = true;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
@@ -77,11 +83,11 @@ public class InteractionScript : MonoBehaviour
                 interactTarget = interactable;
                 if (interactTarget != null)
                     interactTarget.ToggleHighlight(true);
+
+                clickInteractEvent.Raise();
             }
 
             moveTarget = hit.collider.ClosestPoint(transform.position);
-                //moveTarget = hit.point;
-
         }
         else
         {

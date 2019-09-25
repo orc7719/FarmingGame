@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class CropTile : MonoBehaviour, IInteractable
 {
@@ -17,6 +18,11 @@ public class CropTile : MonoBehaviour, IInteractable
     Sprite wateredSprite;
 
     float plantedTime;
+    [SerializeField] GameEvent waterEvent;
+    [SerializeField] GameEvent plantEvent;
+    [SerializeField] GameEvent grownEvent;
+    [SerializeField] GameEvent harvestEvent;
+    [SerializeField] GameEvent spoilEvent;
 
     private void Awake()
     {
@@ -56,6 +62,7 @@ public class CropTile : MonoBehaviour, IInteractable
                     PlayerItem.Instance.DestroyItem();
                     currentState = TileState.Planted;
                     plantedTime = Time.time;
+                    plantEvent.Raise();
                 }
                 break;
             case TileState.Planted:
@@ -78,6 +85,7 @@ public class CropTile : MonoBehaviour, IInteractable
     {
         currentState = TileState.Watered;
         PlayerItem.Instance.DestroyItem();
+        waterEvent.Raise();
     }
 
     public void CollectCrop()
@@ -86,6 +94,7 @@ public class CropTile : MonoBehaviour, IInteractable
         {
             currentCrop = null;
             currentState = TileState.Dirt;
+            harvestEvent.Raise();
         }
     }
 
@@ -96,6 +105,7 @@ public class CropTile : MonoBehaviour, IInteractable
             if (Time.time >= plantedTime + GameManager.Settings.cropGrowTime )
             {
                 currentState = TileState.Grown;
+                grownEvent.Raise();
                 UpdateCropSprite();
                 statusRend.sprite = statusSprites[0];
             }
@@ -108,6 +118,7 @@ public class CropTile : MonoBehaviour, IInteractable
             {
                 currentState = TileState.Dead;
                 statusRend.sprite = statusSprites[2];
+                spoilEvent.Raise();
                 UpdateCropSprite();
             }
             else if (Time.time >= plantedTime + ((GameManager.Settings.cropSpoilTime + GameManager.Settings.cropGrowTime) / 2))

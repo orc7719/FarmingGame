@@ -13,6 +13,9 @@ public class Market : MonoBehaviour, IInteractable
     List<Crop> cropOrder = new List<Crop>();
 
     Sprite[] orderSprites;
+    [SerializeField] GameEvent correctItemEvent;
+    [SerializeField] GameEvent incorrectItemEvent;
+    [SerializeField] GameEvent orderCompleteEvent;
 
     void Start()
     {
@@ -32,6 +35,11 @@ public class Market : MonoBehaviour, IInteractable
                 PlayerItem.Instance.DestroyItem();
 
                 CheckCurrentOrder();
+                correctItemEvent.Raise();
+            }
+            else
+            {
+                incorrectItemEvent.Raise();
             }
         }
     }
@@ -42,6 +50,7 @@ public class Market : MonoBehaviour, IInteractable
         {
             completedOrders++;
             orderComplete.Raise();
+            orderCompleteEvent.Raise();
             GetNewOrder();
         }
     }

@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class SeedBin : MonoBehaviour, IInteractable
 {
     public Seed seedItem;
     SpriteRenderer rend;
     [SerializeField] SpriteRenderer binIcon;
+    [SerializeField] GameEvent interactEvent;
 
     public void Interact()
     {
         PlayerItem.Instance.CurrentItem = seedItem;
+        interactEvent.Raise();
     }
 
     public bool isInteractable()

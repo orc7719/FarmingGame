@@ -120,3 +120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b827b389f6770474cbbc2c555b0575c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactEvent: {fileID: 11400000, guid: 8c82fd39b4ae685478db713f3f2daa7f, type: 2}

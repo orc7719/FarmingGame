@@ -203,3 +203,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedItem: {fileID: 11400000, guid: 9f7b5c268fd50064490a5f234ff18f2d, type: 2}
   binIcon: {fileID: 2155337737241651227}
+  interactEvent: {fileID: 11400000, guid: 69fa43add1480ce4e867fb0f40d9ebdd, type: 2}

@@ -71,3 +71,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bucketItem: {fileID: 11400000, guid: cb5404c56db294544a14b189becaec46, type: 2}
+  interactEvent: {fileID: 11400000, guid: 6115852c26a5d894aa48d2a6d0ae7195, type: 2}

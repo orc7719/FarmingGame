@@ -242,6 +242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryRend: {fileID: 5450971145487775291}
+  clickEvent: {fileID: 11400000, guid: 8668a0f8dcc664e4c97ac5f1383bfb30, type: 2}
+  clickInteractEvent: {fileID: 11400000, guid: 475d95c3e99c0c549ad68c3ece7104dd, type: 2}
 --- !u!82 &5450971144814549405
 AudioSource:
   m_ObjectHideFlags: 0

@@ -125,6 +125,11 @@ MonoBehaviour:
   currentCrop: {fileID: 0}
   statusRend: {fileID: 802622266114291825}
   cropRend: {fileID: 802622266316633576}
+  waterEvent: {fileID: 11400000, guid: b6aa260d653126047a410c77b273668f, type: 2}
+  plantEvent: {fileID: 11400000, guid: a36d34be0a9165648b8a4d9f2ab644c0, type: 2}
+  grownEvent: {fileID: 11400000, guid: 70e2d661940bd1843af59dfa5ed2b4d0, type: 2}
+  harvestEvent: {fileID: 11400000, guid: f8721f3854c2ee047969dc90f39bf082, type: 2}
+  spoilEvent: {fileID: 11400000, guid: 21bb0306c9f91174798a6219298babf3, type: 2}
 --- !u!1 &802622266114291824
 GameObject:
   m_ObjectHideFlags: 0
