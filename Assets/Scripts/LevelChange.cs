@@ -5,15 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject LevelSelect;
+    public GameObject Credits;
 
     // Update is called once per frame
-    void Update()
+    public void ToggleLevelSelect(bool newstate)
     {
-        
+        LevelSelect.SetActive(newstate);
+      //SceneManager.LoadScene( "InteractionScene") ;
+      
+    }
+    public void ToggleCredits(bool newstate1)
+    {
+        Credits.SetActive(newstate1);
     }
 }
