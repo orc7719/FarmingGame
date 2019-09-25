@@ -44,9 +44,12 @@ public class InteractionScript : MonoBehaviour
         {
             if(ai.reachedEndOfPath)
             {
-                interactTarget.Interact();
+               
                 if (interactTarget != null)
+                {
+                    interactTarget.Interact();
                     interactTarget.ToggleHighlight(false);
+                }
                 interactTarget = null;
                 UpdateCurrentItemRend();
                 hasTarget = false;
