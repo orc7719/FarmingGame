@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level 01
   m_EditorClassIdentifier: 
   levelScene:
-    sceneAsset: {fileID: 102900000, guid: 05b48e9223a8d7841845c3f5102aece6, type: 3}
-    scenePath: Assets/Scenes/Levels/Level 01.unity
+    sceneAsset: {fileID: 102900000, guid: 74f981c8fe8a0cb4497db4c075a3420f, type: 3}
+    scenePath: Assets/Scenes/TutorialScene.unity

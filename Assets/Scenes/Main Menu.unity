@@ -216,7 +216,7 @@ RectTransform:
   - {fileID: 1411176184}
   - {fileID: 1825861063}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -233,8 +233,9 @@ GameObject:
   m_Component:
   - component: {fileID: 108803454}
   - component: {fileID: 108803453}
+  - component: {fileID: 108803455}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,8 +267,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108803455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108803452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979b11bcf82296d42a10dcebee1734ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112949884
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,7 +419,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386356346
 GameObject:
@@ -844,7 +857,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &857156725
 GameObject:
@@ -937,7 +950,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1575,7 +1588,7 @@ PrefabInstance:
     - target: {fileID: 2155337738537486085, guid: 57755d5ca7cee294c9f7bdf36a662044,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2155337738537486085, guid: 57755d5ca7cee294c9f7bdf36a662044,
         type: 3}
@@ -1898,7 +1911,7 @@ PrefabInstance:
     - target: {fileID: 5450971144814549379, guid: affc61d93e5b6ac49b67f79d39c50be8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5450971144814549379, guid: affc61d93e5b6ac49b67f79d39c50be8,
         type: 3}
@@ -2416,7 +2429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1975010739
 GameObject:
@@ -2548,7 +2561,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015086269
 GameObject:
@@ -2631,7 +2644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073863605
 GameObject:
@@ -2711,7 +2724,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2096485738
 PrefabInstance:
@@ -2763,7 +2776,7 @@ PrefabInstance:
     - target: {fileID: 2155337738537486085, guid: 57755d5ca7cee294c9f7bdf36a662044,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2155337738537486085, guid: 57755d5ca7cee294c9f7bdf36a662044,
         type: 3}
@@ -2842,7 +2855,7 @@ PrefabInstance:
     - target: {fileID: 1546422371058535511, guid: c9719934cbe4d4341ba3ec96d24f076b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1546422371058535511, guid: c9719934cbe4d4341ba3ec96d24f076b,
         type: 3}
