@@ -79,7 +79,8 @@ public class InteractionScript : MonoBehaviour
                     interactTarget.ToggleHighlight(true);
             }
 
-                moveTarget = hit.point;
+            moveTarget = hit.collider.ClosestPoint(transform.position);
+                //moveTarget = hit.point;
 
         }
         else
