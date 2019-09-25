@@ -9,4 +9,6 @@ public class GameSettings : ScriptableSingleton<GameSettings>
     public float cropSpoilTime = 10f;
 
     public float interactDistance = 2f;
+
+    public GameLevel currentLevel;
 }

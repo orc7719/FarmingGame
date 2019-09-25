@@ -12,6 +12,10 @@ public class GameResources : ScriptableSingleton<GameResources>
 
     [Header("Crop Data")]
     public CropCollection allCrops;
+    public Crop wheatObject;
+    public Crop carrotObject;
+    public Crop potatoObject;
+    public Crop beetObject;
 
     [Header("Level Data")]
     public SceneReferenceCollection allLevels;

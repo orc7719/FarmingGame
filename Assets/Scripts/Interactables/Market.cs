@@ -6,7 +6,7 @@ using ScriptableObjectArchitecture;
 public class Market : MonoBehaviour, IInteractable
 {
     public GameEvent orderComplete;
-    int completedOrders = 0;
+    //int completedOrders = 0;
     SpriteRenderer rend;
 
     public CropCollection[] levelOrders;
@@ -17,12 +17,19 @@ public class Market : MonoBehaviour, IInteractable
     [SerializeField] GameEvent incorrectItemEvent;
     [SerializeField] GameEvent orderCompleteEvent;
 
+    bool doExtraOrders;
+
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
         ToggleHighlight(false);
+        LevelController.Instance.GetLevelSettings();
 
-        GetNewOrder();
+        doExtraOrders = GameManager.Settings.currentLevel.extraOrders;
+
+
+        cropOrder = LevelController.Instance.GetNewOrder();
+
     }
 
     public void Interact()
@@ -36,6 +43,8 @@ public class Market : MonoBehaviour, IInteractable
 
                 CheckCurrentOrder();
                 correctItemEvent.Raise();
+
+                LevelController.Instance.UpdateOrderUI(cropOrder);
             }
             else
             {
@@ -48,36 +57,19 @@ public class Market : MonoBehaviour, IInteractable
     {
         if (cropOrder.Count <= 0)
         {
-            completedOrders++;
+            LevelController.Instance.completedOrders++;
             orderComplete.Raise();
             orderCompleteEvent.Raise();
-            GetNewOrder();
-        }
-    }
 
-    void GetNewOrder()
-    {
-        cropOrder.Clear();
-
-        if(completedOrders < levelOrders.Length)
-        {
-            foreach (Crop cropItem in levelOrders[completedOrders].List)
+            if (LevelController.Instance.completedOrders >= GameManager.Settings.currentLevel.levelOrders.Length && !doExtraOrders)
             {
-                cropOrder.Add(cropItem);
+                LevelController.Instance.CompleteLevel();
+            }
+            else
+            {
+                cropOrder = LevelController.Instance.GetNewOrder();
             }
         }
-        else
-        {
-            //Random Order
-            int randomCount = Random.Range(2, 5);
-
-            for (int i = 0; i < randomCount; i++)
-            {
-                cropOrder.Add(GameManager.Resources.allCrops[Random.Range(0, GameManager.Resources.allCrops.Count)]);
-            }
-        }
-
-        UpdateMarketSprites();
     }
 
     void UpdateMarketSprites()
