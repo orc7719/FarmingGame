@@ -71,6 +71,7 @@ public class CropTile : MonoBehaviour, IInteractable
                 CollectCrop();
                 break;
             case TileState.Dead:
+                harvestEvent.Raise();
                 currentState = TileState.Dirt;
                 currentCrop = null;
                 break;
