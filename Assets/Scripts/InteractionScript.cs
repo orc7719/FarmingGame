@@ -98,6 +98,7 @@ public class InteractionScript : MonoBehaviour
         else
         {
             moveTarget = Get2DMousePosition();
+            interactTarget = null;
         }
 
         ai.destination = moveTarget;
