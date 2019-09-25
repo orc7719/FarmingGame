@@ -10,8 +10,10 @@ public class WaterPickup : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        PlayerItem.Instance.CurrentItem = bucketItem;
-        interactEvent.Raise();
+        if (PlayerItem.Instance.ChangeItem(bucketItem))
+        {
+            interactEvent.Raise();
+        }
     }
 
     public bool isInteractable()

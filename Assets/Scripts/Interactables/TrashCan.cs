@@ -10,8 +10,11 @@ public class TrashCan : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        PlayerItem.Instance.DestroyItem();
-        interactEvent.Raise();
+        if (PlayerItem.Instance.CurrentItem != null)
+        {
+            PlayerItem.Instance.DestroyItem();
+            interactEvent.Raise();
+        }
     }
 
     public bool isInteractable()

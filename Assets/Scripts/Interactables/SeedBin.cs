@@ -12,8 +12,10 @@ public class SeedBin : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        PlayerItem.Instance.CurrentItem = seedItem;
-        interactEvent.Raise();
+        if (PlayerItem.Instance.ChangeItem(seedItem))
+        {
+            interactEvent.Raise();
+        }
     }
 
     public bool isInteractable()
