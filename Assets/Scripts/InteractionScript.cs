@@ -22,6 +22,7 @@ public class InteractionScript : MonoBehaviour
 
     [SerializeField] GameEvent clickEvent;
     [SerializeField] GameEvent clickInteractEvent;
+    [SerializeField] GameObject touchParticle;
 
     private void Start()
     {
@@ -108,6 +109,8 @@ public class InteractionScript : MonoBehaviour
 
         ai.destination = moveTarget;
         pathWait = Time.time;
+
+        Instantiate(touchParticle, Get2DMousePosition(), Quaternion.identity);
     }
 
     Vector2 Get2DMousePosition()
