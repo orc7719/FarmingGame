@@ -15,3 +15,4 @@ MonoBehaviour:
   cropGrowTime: 4
   cropSpoilTime: 15
   interactDistance: 2
+  currentLevel: {fileID: 11400000, guid: 3e405a3a637f61a4eb7090d5e2c20745, type: 2}

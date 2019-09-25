@@ -19,4 +19,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 92c4b900b71a5c34ab6b15f8c983c1af, type: 3}
   - {fileID: 21300000, guid: 944945b0d31cf654e83f19ca641a12db, type: 3}
   allCrops: {fileID: 11400000, guid: d94fb9cdf46f68749afc9d42f64ee307, type: 2}
+  wheatObject: {fileID: 11400000, guid: e67a10a3880b02b4784761f221fd48a5, type: 2}
+  carrotObject: {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
+  potatoObject: {fileID: 11400000, guid: 1b8bb053bab43384d9345330147678cd, type: 2}
+  beetObject: {fileID: 11400000, guid: 92d2708bc1a62a9498d1e28b1e531f3e, type: 2}
   allLevels: {fileID: 11400000, guid: cdeaabc94804d5b4bb7307601cb2f7c2, type: 2}
