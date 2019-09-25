@@ -92,6 +92,11 @@ public class InteractionScript : MonoBehaviour
 
                 clickInteractEvent.Raise();
             }
+            else
+            {
+                moveTarget = Get2DMousePosition();
+                interactTarget = null;
+            }
 
             moveTarget = hit.collider.ClosestPoint(transform.position);
         }
