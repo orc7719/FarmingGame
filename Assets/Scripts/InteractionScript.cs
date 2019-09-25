@@ -15,6 +15,9 @@ public class InteractionScript : MonoBehaviour
     AIPath ai;
     float pathWait;
 
+    Vector2 moveTarget;
+    float distanceToTarget;
+
     AudioSource audioSource;
 
     [SerializeField] GameEvent clickEvent;
@@ -44,7 +47,9 @@ public class InteractionScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             ScreenMouseRay();
 
-        if(hasTarget && Time.time >= pathWait + 0.1f)
+        distanceToTarget = Vector2.Distance(transform.position, moveTarget);
+
+        if(hasTarget && Time.time >= pathWait + 0.1f && distanceToTarget <= 0.1f)
         {
             if(ai.reachedEndOfPath)
             {
@@ -54,6 +59,7 @@ public class InteractionScript : MonoBehaviour
                     interactTarget.Interact();
                     interactTarget.ToggleHighlight(false);
                 }
+
                 interactTarget = null;
                 UpdateCurrentItemRend();
                 hasTarget = false;
@@ -69,7 +75,7 @@ public class InteractionScript : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
 
-        Vector2 moveTarget;
+        
 
         if (interactTarget != null)
             interactTarget.ToggleHighlight(false);
