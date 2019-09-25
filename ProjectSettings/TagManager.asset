@@ -44,9 +44,15 @@ TagManager:
   - name: Background
     uniqueID: 3163589653
     locked: 0
-  - name: Crop
+  - name: Decoration
     uniqueID: 2828905545
+    locked: 0
+  - name: Interactables
+    uniqueID: 3746617479
     locked: 0
   - name: Character
     uniqueID: 4281945381
+    locked: 0
+  - name: Notifications
+    uniqueID: 2268539319
     locked: 0
