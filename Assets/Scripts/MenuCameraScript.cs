@@ -5,7 +5,7 @@ using UnityEngine;
 public class MenuCameraScript : MonoBehaviour
 {
     [SerializeField] Transform player;
-    float elasticity = 2f;
+    float elasticity = 1.5f;
     int z;
     // Start is called before the first frame update
     void Start()
