@@ -17,6 +17,6 @@ public class LevelButton : MonoBehaviour
 
     public void LoadNewLevel()
     {
-        SceneManager.LoadScene(gameLevel.levelScene);
+        GameManager.Instance.LoadLevel(gameLevel.levelScene);
     }
 }
