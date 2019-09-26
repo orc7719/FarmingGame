@@ -6,16 +6,22 @@ public class MenuCameraScript : MonoBehaviour
 {
     [SerializeField] Transform player;
     float elasticity = 1.5f;
+    float lerpRate = 0.01f;
     int z;
-    // Start is called before the first frame update
     void Start()
     {
         z = Mathf.RoundToInt(transform.position.z);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3((player.position.x / elasticity), (player.position.y / elasticity), z);
+        Vector3 currentPos = transform.position;
+        Vector3 deltaPos = TargetPosition() - currentPos;
+        deltaPos *= lerpRate;
+        deltaPos = deltaPos + currentPos;
+        transform.position = deltaPos;
+    }
+    Vector3 TargetPosition()
+    {
+        return new Vector3((player.position.x / elasticity), (player.position.y / elasticity), z);
     }
 }
