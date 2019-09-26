@@ -3,86 +3,96 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.UI;
 using TMPro;
+using ScriptableObjectArchitecture;
 
 public class LevelController : Singleton<LevelController>
 {
-    public TMP_Text timer;
+    public bool levelPaused;
+    [SerializeField] GameEvent orderCompleteEvent;
 
     bool levelPlaying = true;
 
     //change the time longer or shorter (convert into seconds E.G 3minuits 180 seconds)
-    float gametimer = 180f;
+    [SerializeField] int gametimer = 180;
     // Start is called before the first frame update
 
 
-    float levelTimer;
 
     public int completedOrders = 0;
-    List<CropCollection> levelOrders = new List<CropCollection>();
-    List<Crop> currentOrder = new List<Crop>();
-
-    int minCropsOrder;
-    int maxCropsOrder;
-
-    bool doExtraOrders;
-    bool useAllCrops = true;
-
-    [SerializeField] TMP_Text wheatCountText;
-    [SerializeField] TMP_Text carrotCountText;
-    [SerializeField] TMP_Text potatoCountText;
-    [SerializeField] TMP_Text beetCountText;
+    [SerializeField] List<CropCollection> levelOrders = new List<CropCollection>();
+    public List<Crop> currentOrder = new List<Crop>();
 
 
     void Start()
     {
-        //GetLevelSettings();
+        StartCoroutine("GameTimer");
+        currentOrder = GetNewOrder();
     }
 
-    public void GetLevelSettings()
+    IEnumerator GameTimer()
     {
-        levelTimer = GameManager.Settings.currentLevel.levelTime;
+        UIController.Instance.UpdateTimer(gametimer);
 
-        for (int i = 0; i < GameManager.Settings.currentLevel.levelOrders.Length; i++)
+        while (gametimer >= 0)
         {
-            levelOrders.Add(GameManager.Settings.currentLevel.levelOrders[i]);
+            yield return new WaitForSeconds(1f);
+            UIController.Instance.UpdateTimer(gametimer);
         }
 
-        minCropsOrder = GameManager.Settings.currentLevel.minExtraOrders;
-        maxCropsOrder = GameManager.Settings.currentLevel.maxExtraOrders;
-
-        if (GameManager.Settings.currentLevel.extraCropTypes.Length > 0)
-        {
-            useAllCrops = false;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         if (levelPlaying)
-        if (gametimer >= 0)
+            FailLevel();
+    }
+
+    void CompleteLevel()
+    {
+        levelPlaying = false;
+    }
+
+    void FailLevel()
+    {
+
+    }
+
+    public bool TryTurnInItem(Item cropItem)
+    {
+        Crop convertedItem = (Crop)cropItem;
+
+        if(currentOrder.Contains(convertedItem))
         {
-            //this countdowns the time.
-            gametimer -= Time.deltaTime;
+            currentOrder.Remove(convertedItem);
 
+            CheckCurrentOrder();
 
-            int seconds = (int)(gametimer % 60); //converts to seconds
-            int minutes = (int)(gametimer / 60) % 60; //converts to minuits
+            UIController.Instance.UpdateOrderDisplay();
 
+            Debug.Log("CORRECT ITEM");
 
-            string timerString = string.Format("{0:0}:{1:00}", minutes, seconds);
-
-            timer.text = timerString;
+            return true;
         }
         else
         {
-            CompleteLevel();
+            Debug.Log("INCORRECT ITEM");
+
+            return false;
         }
     }
 
-    public void CompleteLevel()
+    void CheckCurrentOrder()
     {
-        levelPlaying = false;
+        if(currentOrder.Count <= 0)
+        {
+            completedOrders++;
+            orderCompleteEvent.Raise();
+
+            if(completedOrders >= levelOrders.Count)
+            {
+                CompleteLevel();
+            }
+            else
+            {
+                currentOrder = GetNewOrder();
+            }
+        }
     }
 
     public List<Crop> GetNewOrder()
@@ -97,64 +107,11 @@ public class LevelController : Singleton<LevelController>
                 Debug.Log("Updating Orders 02");
                 currentOrder.Add(cropItem);
             }
-        }
-        else
-        {
-            int randomCount = Random.Range(minCropsOrder, maxCropsOrder);
-
-            for (int i = 0; i < randomCount; i++)
-            {
-                Debug.Log("Updating Orders 03");
-                if (useAllCrops)
-                    currentOrder.Add(GameManager.Resources.allCrops[Random.Range(0, GameManager.Resources.allCrops.Count)]);
-                else
-                {
-                    currentOrder.Add(GameManager.Settings.currentLevel.extraCropTypes[Random.Range(0, GameManager.Settings.currentLevel.extraCropTypes.Length)]);
-                }
-            }
-        }
-        UpdateOrderUI();
         
-        return currentOrder;
-    }
-
-    void UpdateOrderUI()
-    {
-        UpdateOrderUI(currentOrder);
-    }
-
-    public void UpdateOrderUI(List<Crop> updatedOrder)
-    {
-        Debug.Log("Updating Orders");
-
-        int wheatCount = 0;
-        int carrotCount = 0;
-        int potatoCount = 0;
-        int beetCount = 0;
-
-        for (int i = 0; i < updatedOrder.Count; i++)
-        {
-            if(updatedOrder[i] == GameManager.Resources.wheatObject)
-            {
-                wheatCount++;
-            }
-            else if (updatedOrder[i] == GameManager.Resources.carrotObject)
-            {
-                carrotCount++;
-            }
-            else if (updatedOrder[i] == GameManager.Resources.potatoObject)
-            {
-                potatoCount++;
-            }
-            else if (updatedOrder[i] == GameManager.Resources.beetObject)
-            {
-                beetCount++;
-            }
         }
 
-        wheatCountText.text = wheatCount.ToString("0");
-        carrotCountText.text = carrotCount.ToString("0");
-        potatoCountText.text = potatoCount.ToString("0");
-        beetCountText.text = beetCount.ToString("0");
+        UIController.Instance.UpdateOrderDisplay();
+
+        return currentOrder;
     }
 }

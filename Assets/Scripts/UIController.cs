@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIController : MonoBehaviour
+public class UIController : Singleton<UIController>
 {
-   // public static bool GamePaused = false;
-
+    [SerializeField] TMP_Text wheatCountText, carrotCountText, potatoCountText, beetCountText;
     public GameObject pausemenu, PauseButton;
+    public TMP_Text timerText;
 
+    #region PauseMenu
     public void Pause()
     {
+        
         pausemenu.SetActive(true);
         PauseButton.SetActive(false);
 
+        LevelController.Instance.levelPaused = true;
         Time.timeScale = 0;
     }
 
@@ -21,14 +24,57 @@ public class UIController : MonoBehaviour
     {
         pausemenu.SetActive(false);
         PauseButton.SetActive(true);
+
+        LevelController.Instance.levelPaused = false;
         Time.timeScale = 1;
     }
 
+    #endregion
 
-
-    // Update is called once per frame
-    void Update()
+    public void UpdateTimer(int newTime)
     {
-        
+        newTime = Mathf.Clamp(newTime, 0, newTime);
+
+        int seconds = (newTime % 60); //converts to seconds
+        int minutes = (newTime / 60) % 60; //converts to minuits
+
+        timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+
     }
+
+    public void UpdateOrderDisplay()
+    {
+        List<Crop> localOrder = LevelController.Instance.currentOrder;
+
+        int wheatCount = 0;
+        int carrotCount = 0;
+        int potatoCount = 0;
+        int beetCount = 0;
+
+        for (int i = 0; i < localOrder.Count; i++)
+        {
+            if (localOrder[i] == GameManager.Resources.wheatObject)
+            {
+                wheatCount++;
+            }
+            else if (localOrder[i] == GameManager.Resources.carrotObject)
+            {
+                carrotCount++;
+            }
+            else if (localOrder[i] == GameManager.Resources.potatoObject)
+            {
+                potatoCount++;
+            }
+            else if (localOrder[i] == GameManager.Resources.beetObject)
+            {
+                beetCount++;
+            }
+        }
+
+        wheatCountText.text = wheatCount.ToString("0");
+        carrotCountText.text = carrotCount.ToString("0");
+        potatoCountText.text = potatoCount.ToString("0");
+        beetCountText.text = beetCount.ToString("0");
+    }
+
 }

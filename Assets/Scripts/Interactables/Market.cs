@@ -9,10 +9,6 @@ public class Market : MonoBehaviour, IInteractable
     //int completedOrders = 0;
     SpriteRenderer rend;
 
-    public CropCollection[] levelOrders;
-    List<Crop> cropOrder = new List<Crop>();
-
-    Sprite[] orderSprites;
     [SerializeField] GameEvent correctItemEvent;
     [SerializeField] GameEvent incorrectItemEvent;
     [SerializeField] GameEvent orderCompleteEvent;
@@ -23,58 +19,25 @@ public class Market : MonoBehaviour, IInteractable
     {
         rend = GetComponent<SpriteRenderer>();
         ToggleHighlight(false);
-        LevelController.Instance.GetLevelSettings();
-
-        doExtraOrders = GameManager.Settings.currentLevel.extraOrders;
-
-
-        cropOrder = LevelController.Instance.GetNewOrder();
-
     }
 
     public void Interact()
     {
         if (PlayerItem.Instance.CurrentItem is Crop)
         {
-            if (cropOrder.Contains((Crop)PlayerItem.Instance.CurrentItem))
+            if (LevelController.Instance.TryTurnInItem(PlayerItem.Instance.CurrentItem))
             {
-                cropOrder.Remove((Crop)PlayerItem.Instance.CurrentItem);
-                PlayerItem.Instance.DestroyItem();
+               PlayerItem.Instance.DestroyItem();
 
-                CheckCurrentOrder();
                 correctItemEvent.Raise();
 
-                LevelController.Instance.UpdateOrderUI(cropOrder);
+                UIController.Instance.UpdateOrderDisplay();
             }
             else
             {
                 incorrectItemEvent.Raise();
             }
         }
-    }
-
-    void CheckCurrentOrder()
-    {
-        if (cropOrder.Count <= 0)
-        {
-            LevelController.Instance.completedOrders++;
-            orderComplete.Raise();
-            orderCompleteEvent.Raise();
-
-            if (LevelController.Instance.completedOrders >= GameManager.Settings.currentLevel.levelOrders.Length && !doExtraOrders)
-            {
-                LevelController.Instance.CompleteLevel();
-            }
-            else
-            {
-                cropOrder = LevelController.Instance.GetNewOrder();
-            }
-        }
-    }
-
-    void UpdateMarketSprites()
-    {
-
     }
 
     public bool isInteractable()

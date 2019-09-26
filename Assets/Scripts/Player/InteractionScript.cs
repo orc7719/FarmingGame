@@ -112,6 +112,7 @@ public class InteractionScript : MonoBehaviour
         ai.destination = moveTarget;
         pathWait = Time.time;
 
+        if(!LevelController.Instance.levelPaused)
         Instantiate(touchParticle, Get2DMousePosition(), Quaternion.identity);
     }
 

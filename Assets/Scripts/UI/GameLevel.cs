@@ -6,12 +6,4 @@ using UnityEngine;
 public class GameLevel : ScriptableObject
 {
     public SceneReference levelScene;
-
-    public float levelTime = 180;
-    public CropCollection[] levelOrders;
-
-    public bool extraOrders = false;
-    public Crop[] extraCropTypes;
-    public int maxExtraOrders = 4;
-    public int minExtraOrders = 2;
 }
