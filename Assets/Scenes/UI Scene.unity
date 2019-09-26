@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359492146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -2136,7 +2136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &640402320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670832243}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -2387,13 +2387,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11086c18a48a42b40a9955994412617d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheatCountText: {fileID: 0}
-  carrotCountText: {fileID: 0}
-  potatoCountText: {fileID: 0}
-  beetCountText: {fileID: 0}
+  wheatCountText: {fileID: 1775950480}
+  carrotCountText: {fileID: 608965089}
+  potatoCountText: {fileID: 339444240}
+  beetCountText: {fileID: 581866644}
   pausemenu: {fileID: 840968281}
   PauseButton: {fileID: 1679532921}
-  timerText: {fileID: 0}
+  timerText: {fileID: 1829940018}
 --- !u!1 &840968281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 70344508813763902, guid: ba8a41c04b8cba241aadccf1b3b87d13,
@@ -3987,7 +3987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1982124175
 RectTransform:
   m_ObjectHideFlags: 0
