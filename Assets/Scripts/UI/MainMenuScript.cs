@@ -10,6 +10,7 @@ public class MainMenuScript : MonoBehaviour
     public GameObject Credits;
     public Slider VolumeSlider;
     public AudioMixer masterAudio;
+    public GameObject ExitButton;
     // Update is called once per frame
     public void ToggleLevelSelect(bool newstate)
     {
@@ -26,4 +27,10 @@ public class MainMenuScript : MonoBehaviour
     {
         masterAudio.SetFloat("Master", VolumeSlider.value);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }
