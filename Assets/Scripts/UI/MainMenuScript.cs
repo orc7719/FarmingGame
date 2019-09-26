@@ -11,12 +11,18 @@ public class MainMenuScript : MonoBehaviour
     public Slider VolumeSlider;
     public AudioMixer masterAudio;
     public GameObject ExitButton;
+    public LevelSelectionSetup levelList;
+
+    void Start()
+    {
+        VolumeSlider.value = -30f;
+    }
+
     // Update is called once per frame
     public void ToggleLevelSelect(bool newstate)
     {
         LevelSelect.SetActive(newstate);
-      //SceneManager.LoadScene( "InteractionScene") ;
-      
+        levelList.UpdateLevelList();
     }
     public void ToggleCredits(bool newstate1)
     {
@@ -32,5 +38,4 @@ public class MainMenuScript : MonoBehaviour
     {
         Application.Quit();
     }
-
 }
