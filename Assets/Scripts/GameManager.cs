@@ -20,6 +20,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] SceneReference menuScene;
     [SerializeField] SceneReference uiScene;
 
+    void Start()
+    {
+        SceneManager.LoadScene(menuScene);
+    }
+
+
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(menuScene);
@@ -29,6 +35,5 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene(uiScene);
         SceneManager.LoadScene(newLevel, LoadSceneMode.Additive);
-        
     }
 }

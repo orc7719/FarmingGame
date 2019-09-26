@@ -18,12 +18,12 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            if (m_ShuttingDown)
-            {
-                Debug.LogWarning(debugTag + " Instance '" + typeof(T) +
-                    "' already destroyed. Returning null.");
-                return null;
-            }
+            //if (m_ShuttingDown)
+            //{
+             //   Debug.LogWarning(debugTag + " Instance '" + typeof(T) +
+            //        "' already destroyed. Returning null.");
+            //   return null;
+            //}
 
             lock (m_Lock)
             {

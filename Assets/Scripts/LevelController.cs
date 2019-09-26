@@ -12,6 +12,8 @@ public class LevelController : Singleton<LevelController>
 
     bool levelPlaying = true;
 
+    
+
     //change the time longer or shorter (convert into seconds E.G 3minuits 180 seconds)
     [SerializeField] int gametimer = 180;
     // Start is called before the first frame update
@@ -25,9 +27,13 @@ public class LevelController : Singleton<LevelController>
 
     void Start()
     {
+        levelPaused = false;
+        Time.timeScale = 1;
+
         StartCoroutine(GameTimer());
         currentOrder = GetNewOrder();
     }
+
 
     IEnumerator GameTimer()
     {
@@ -102,10 +108,8 @@ public class LevelController : Singleton<LevelController>
 
         if (completedOrders < levelOrders.Count)
         {
-            Debug.Log("Updating Orders 01");
             foreach (Crop cropItem in levelOrders[completedOrders].List)
             {
-                Debug.Log("Updating Orders 02");
                 currentOrder.Add(cropItem);
             }
         
