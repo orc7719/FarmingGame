@@ -17,6 +17,9 @@ public class MovementBobbleScript : MonoBehaviour
     }
     void Update()
     {
+        if (LevelController.Instance.levelPaused)
+            footsteps.Stop();
+
         if ((ai.velocity.magnitude > 0) && !ai.reachedEndOfPath)
         {
             if (!haventRecentlyReset)
