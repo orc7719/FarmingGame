@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -14,5 +15,19 @@ public class GameManager : Singleton<GameManager>
     public static GameResources Resources
     {
         get { return Instance.resources; }
+    }
+
+    [SerializeField] SceneReference menuScene;
+    [SerializeField] SceneReference uiScene;
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene(menuScene);
+    }
+
+    public void LoadLevel(SceneReference newLevel)
+    {
+        SceneManager.LoadScene(newLevel);
+        SceneManager.LoadScene(uiScene, LoadSceneMode.Additive);
     }
 }

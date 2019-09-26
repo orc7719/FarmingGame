@@ -29,6 +29,11 @@ public class UIController : Singleton<UIController>
         Time.timeScale = 1;
     }
 
+    public void ReturnToMenu()
+    {
+        GameManager.Instance.ReturnToMenu();
+    }
+
     #endregion
 
     public void UpdateTimer(int newTime)

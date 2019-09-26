@@ -9,6 +9,9 @@ public class Market : MonoBehaviour, IInteractable
     //int completedOrders = 0;
     SpriteRenderer rend;
 
+    [SerializeField]
+    ParticleSystem correctParticle;
+
     [SerializeField] GameEvent correctItemEvent;
     [SerializeField] GameEvent incorrectItemEvent;
     [SerializeField] GameEvent orderCompleteEvent;

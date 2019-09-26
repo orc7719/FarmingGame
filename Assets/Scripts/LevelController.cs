@@ -25,7 +25,7 @@ public class LevelController : Singleton<LevelController>
 
     void Start()
     {
-        StartCoroutine("GameTimer");
+        StartCoroutine(GameTimer());
         currentOrder = GetNewOrder();
     }
 
@@ -36,6 +36,7 @@ public class LevelController : Singleton<LevelController>
         while (gametimer >= 0)
         {
             yield return new WaitForSeconds(1f);
+            gametimer--;
             UIController.Instance.UpdateTimer(gametimer);
         }
 
