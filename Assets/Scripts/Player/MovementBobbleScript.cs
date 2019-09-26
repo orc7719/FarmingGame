@@ -6,7 +6,7 @@ using Pathfinding;
 public class MovementBobbleScript : MonoBehaviour
 {
     AIPath ai;
-    float bobbleRate = 0.6f;
+    float bobbleRate = 100f;
     int angleToBobble = 10;
     bool haventRecentlyReset = false;
     AudioSource footsteps;
@@ -33,7 +33,7 @@ public class MovementBobbleScript : MonoBehaviour
                     bobbleRate *= -1;
                 }
             }
-            z += bobbleRate;
+            z += bobbleRate * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(new Vector3(0, 0, z));
         }
         if (ai.reachedEndOfPath && haventRecentlyReset)
