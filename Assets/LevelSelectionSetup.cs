@@ -10,7 +10,7 @@ public class LevelSelectionSetup : MonoBehaviour
     List<GameObject> levelObjects = new List<GameObject>();
 
     [ContextMenu("Update Levels")]
-    void UpdateLevelList()
+    public void UpdateLevelList()
     {
         ClearLevelList();
 
