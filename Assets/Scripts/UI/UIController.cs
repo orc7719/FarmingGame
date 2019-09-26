@@ -9,6 +9,8 @@ public class UIController : Singleton<UIController>
     public GameObject pausemenu, PauseButton;
     public TMP_Text timerText;
 
+    [SerializeField] GameObject winPanel, losePanel;
+
     #region PauseMenu
     public void Pause()
     {
@@ -82,4 +84,13 @@ public class UIController : Singleton<UIController>
         beetCountText.text = beetCount.ToString("0");
     }
 
+    public void ShowWinPanel()
+    {
+        winPanel.SetActive(true);
+    }
+
+    public void ShowLosePanel()
+    {
+        losePanel.SetActive(true);
+    }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 [CreateAssetMenu(menuName = "Data/Resources")]
 public class GameResources : ScriptableSingleton<GameResources>
@@ -19,4 +20,5 @@ public class GameResources : ScriptableSingleton<GameResources>
 
     [Header("Level Data")]
     public SceneReferenceCollection allLevels;
+    public GameEvent orderCompleteEvent;
 }

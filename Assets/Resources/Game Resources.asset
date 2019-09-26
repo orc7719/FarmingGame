@@ -24,3 +24,4 @@ MonoBehaviour:
   potatoObject: {fileID: 11400000, guid: 1b8bb053bab43384d9345330147678cd, type: 2}
   beetObject: {fileID: 11400000, guid: 92d2708bc1a62a9498d1e28b1e531f3e, type: 2}
   allLevels: {fileID: 11400000, guid: cdeaabc94804d5b4bb7307601cb2f7c2, type: 2}
+  orderCompleteEvent: {fileID: 11400000, guid: 9a55d63767be26649858b2bbd1a0362f, type: 2}

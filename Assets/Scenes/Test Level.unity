@@ -3815,7 +3815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPaused: 0
   orderCompleteEvent: {fileID: 11400000, guid: 9a55d63767be26649858b2bbd1a0362f, type: 2}
-  gametimer: 180
+  gametimer: 10
   completedOrders: 0
   levelOrders:
   - {fileID: 11400000, guid: 5ecfc5bff8b2fd448980e7513e988670, type: 2}

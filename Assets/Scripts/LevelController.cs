@@ -8,10 +8,9 @@ using ScriptableObjectArchitecture;
 public class LevelController : Singleton<LevelController>
 {
     public bool levelPaused;
-    [SerializeField] GameEvent orderCompleteEvent;
 
     bool levelPlaying = true;
-
+    [SerializeField] bool tutorial = false;
     
 
     //change the time longer or shorter (convert into seconds E.G 3minuits 180 seconds)
@@ -50,14 +49,18 @@ public class LevelController : Singleton<LevelController>
             FailLevel();
     }
 
-    void CompleteLevel()
+    public void CompleteLevel()
     {
         levelPlaying = false;
+        Time.timeScale = 0;
+        UIController.Instance.ShowWinPanel();
     }
 
     void FailLevel()
     {
-
+        levelPlaying = false;
+        Time.timeScale = 0;
+        UIController.Instance.ShowLosePanel();
     }
 
     public bool TryTurnInItem(Item cropItem)
@@ -72,13 +75,11 @@ public class LevelController : Singleton<LevelController>
 
             UIController.Instance.UpdateOrderDisplay();
 
-            Debug.Log("CORRECT ITEM");
 
             return true;
         }
         else
         {
-            Debug.Log("INCORRECT ITEM");
 
             return false;
         }
@@ -89,11 +90,12 @@ public class LevelController : Singleton<LevelController>
         if(currentOrder.Count <= 0)
         {
             completedOrders++;
-            orderCompleteEvent.Raise();
+            GameManager.Resources.orderCompleteEvent.Raise();
 
             if(completedOrders >= levelOrders.Count)
             {
-                CompleteLevel();
+                if (!tutorial)
+                    CompleteLevel();
             }
             else
             {
