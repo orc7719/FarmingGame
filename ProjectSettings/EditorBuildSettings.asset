@@ -18,6 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/UI Scene Cory Test.unity
+    path: Assets/Scenes/UI Scene.unity
     guid: 7d3f6bffaab27d645bc86b9265dffc78
   m_configObjects: {}
