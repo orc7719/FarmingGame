@@ -27,7 +27,8 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevel(SceneReference newLevel)
     {
-        SceneManager.LoadScene(newLevel);
-        SceneManager.LoadScene(uiScene, LoadSceneMode.Additive);
+        SceneManager.LoadScene(uiScene);
+        SceneManager.LoadScene(newLevel, LoadSceneMode.Additive);
+        
     }
 }

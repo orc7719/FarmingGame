@@ -13,13 +13,5 @@ MonoBehaviour:
   m_Name: Level 02
   m_EditorClassIdentifier: 
   levelScene:
-    sceneAsset: {fileID: 102900000, guid: 7d3f6bffaab27d645bc86b9265dffc78, type: 3}
-    scenePath: Assets/Scenes/UI Scene Cory Test.unity
-  levelTime: 180
-  levelOrders:
-  - {fileID: 11400000, guid: 8c82dfc0dcca29947a83121cf2a7b1b4, type: 2}
-  - {fileID: 11400000, guid: 137c6f69a65171b4b8571ee2185228a9, type: 2}
-  extraOrders: 0
-  extraCropTypes: []
-  maxExtraOrders: 4
-  minExtraOrders: 2
+    sceneAsset: {fileID: 102900000, guid: 2d08e9c97d76d0c49a93aa75b39fc16c, type: 3}
+    scenePath: Assets/Scenes/Levels/Level 02.unity
