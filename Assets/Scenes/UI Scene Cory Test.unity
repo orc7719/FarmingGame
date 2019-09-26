@@ -1090,12 +1090,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66486cfeeef4ac478fbb5b0c957ce9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 1829940018}
+  timer: {fileID: 0}
   completedOrders: 0
-  wheatCountText: {fileID: 1775950480}
-  carrotCountText: {fileID: 608965089}
-  potatoCountText: {fileID: 339444240}
-  beetCountText: {fileID: 581866644}
+  wheatCountText: {fileID: 0}
+  carrotCountText: {fileID: 0}
+  potatoCountText: {fileID: 0}
+  beetCountText: {fileID: 0}
 --- !u!4 &449915206
 Transform:
   m_ObjectHideFlags: 0
@@ -5783,6 +5783,7 @@ GameObject:
   - component: {fileID: 1679532925}
   - component: {fileID: 1679532924}
   - component: {fileID: 1679532923}
+  - component: {fileID: 1679532926}
   m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
@@ -5886,7 +5887,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0fed25c1e5e40d947a196b5c4aa1f1c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: abe327046e6bd6d4aa5f53fd95c03bde, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5904,6 +5905,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679532921}
   m_CullTransparentMesh: 0
+--- !u!114 &1679532926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679532921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1691562268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6461,7 +6477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -2}
+  m_AnchoredPosition: {x: 13.9, y: -7.89}
   m_SizeDelta: {x: 73.87, y: 38}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1829940018
@@ -6895,6 +6911,7 @@ GameObject:
   - component: {fileID: 2105129837}
   - component: {fileID: 2105129839}
   - component: {fileID: 2105129838}
+  - component: {fileID: 2105129840}
   m_Layer: 5
   m_Name: TimerPanel
   m_TagString: Untagged
@@ -6919,8 +6936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 32, y: -20}
-  m_SizeDelta: {x: 64, y: 40}
+  m_AnchoredPosition: {x: 29.25, y: -17.06}
+  m_SizeDelta: {x: 69.5, y: 45.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105129838
 MonoBehaviour:
@@ -6935,14 +6952,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f86b78f97e862cc429638a49d2c4e3fc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fc41283b0e1150418523a7883cded14, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6960,6 +6977,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105129836}
   m_CullTransparentMesh: 0
+--- !u!114 &2105129840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105129836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &43930093205783063
 PrefabInstance:
   m_ObjectHideFlags: 0
