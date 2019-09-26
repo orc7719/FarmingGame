@@ -355,8 +355,8 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 440a4b00bd48a444689b12e824008a62, type: 3}
     scenePath: Assets/Scenes/Main Menu.unity
   uiScene:
-    sceneAsset: {fileID: 0}
-    scenePath: 
+    sceneAsset: {fileID: 102900000, guid: 7d3f6bffaab27d645bc86b9265dffc78, type: 3}
+    scenePath: Assets/Scenes/UI Scene Cory Test.unity
 --- !u!4 &108803454
 Transform:
   m_ObjectHideFlags: 0
