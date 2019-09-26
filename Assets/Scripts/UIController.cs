@@ -14,7 +14,7 @@ public class UIController : Singleton<UIController>
     {
         
         pausemenu.SetActive(true);
-        PauseButton.SetActive(false);
+        //PauseButton.SetActive(false);
 
         LevelController.Instance.levelPaused = true;
         Time.timeScale = 0;
@@ -23,7 +23,7 @@ public class UIController : Singleton<UIController>
     public void Resume()
     {
         pausemenu.SetActive(false);
-        PauseButton.SetActive(true);
+        //PauseButton.SetActive(true);
 
         LevelController.Instance.levelPaused = false;
         Time.timeScale = 1;
