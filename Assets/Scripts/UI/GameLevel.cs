@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Game Level")]
 public class GameLevel : ScriptableObject
 {
-    public SceneReference levelScene;
+    public SceneReferencePlus levelScene;
 }

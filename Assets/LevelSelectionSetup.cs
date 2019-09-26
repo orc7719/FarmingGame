@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class LevelSelectionSetup : MonoBehaviour
 {
@@ -14,10 +15,10 @@ public class LevelSelectionSetup : MonoBehaviour
     {
         ClearLevelList();
 
-        for (int i = 0; i < GameManager.Resources.allLevels.sceneList.Length; i++)
+        for (int i = 0; i < GameManager.Resources.allLevels.List.Count; i++)
         {
             GameObject newLevel = Instantiate(levelSelectPrefab, contentHolder);
-            newLevel.GetComponent<LevelButton>().SetupButton(GameManager.Resources.allLevels.sceneList[i], i);
+            newLevel.GetComponent<LevelButton>().SetupButton(GameManager.Resources.allLevels[i], i);
             levelObjects.Add(newLevel);
         }
     }

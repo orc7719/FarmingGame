@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using ScriptableObjectArchitecture;
 
 public class LevelButton : MonoBehaviour
 {
     [SerializeField] TMP_Text levelIdText;
-    GameLevel gameLevel;
+    SceneVariable gameLevel;
 
-    public void SetupButton(GameLevel newLevel, int levelNum)
+    public void SetupButton(SceneVariable newLevel, int levelNum)
     {
         gameLevel = newLevel;
         levelIdText.text = levelNum.ToString(" 00");
@@ -17,6 +18,6 @@ public class LevelButton : MonoBehaviour
 
     public void LoadNewLevel()
     {
-        GameManager.Instance.LoadLevel(gameLevel.levelScene);
+        GameManager.Instance.LoadLevel(gameLevel);
     }
 }

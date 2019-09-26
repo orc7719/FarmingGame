@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: AllLevels
   m_EditorClassIdentifier: Assembly-CSharp::SceneReferenceCollection
+  DeveloperDescription:
+    _value: 
+  _list:
+  - {fileID: 11400000, guid: ba02b49e810b2cc409f20e4e429db9a8, type: 2}
+  - {fileID: 11400000, guid: f6272da93f8e4084eb900eef6fa6149c, type: 2}
   sceneList:
   - {fileID: 11400000, guid: ba02b49e810b2cc409f20e4e429db9a8, type: 2}
   - {fileID: 11400000, guid: f6272da93f8e4084eb900eef6fa6149c, type: 2}
-  - {fileID: 11400000, guid: 3e405a3a637f61a4eb7090d5e2c20745, type: 2}
-  - {fileID: 11400000, guid: a0888f5a9cd88534fa1cdc00b5f443b3, type: 2}
-  - {fileID: 11400000, guid: ea3cd8b64618f3245a03cb0333892ab0, type: 2}
-  - {fileID: 11400000, guid: 1cf429c9b4f091046b98af7b9215837b, type: 2}
-  - {fileID: 11400000, guid: 265d9ff5a48a51d46afb518f1d7ebb57, type: 2}
-  - {fileID: 11400000, guid: 53c4e235438d4c34698abbe9ac5e1791, type: 2}

@@ -19,6 +19,6 @@ public class GameResources : ScriptableSingleton<GameResources>
     public Crop beetObject;
 
     [Header("Level Data")]
-    public SceneReferenceCollection allLevels;
+    public SceneCollection allLevels;
     public GameEvent orderCompleteEvent;
 }

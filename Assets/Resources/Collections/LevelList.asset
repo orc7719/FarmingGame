@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12a9c0eccd6762b439ea4541bf69c8e8, type: 3}
-  m_Name: Level 01
+  m_Script: {fileID: 11500000, guid: baec154247b223d4a9b1afe90aa2cf2c, type: 3}
+  m_Name: LevelList
   m_EditorClassIdentifier: 
-  levelScene:
-    sceneAsset: {fileID: 102900000, guid: 42bc34af1a5806342aa6126f1c9c33b0, type: 3}
-    scenePath: Assets/Scenes/Levels/Level 01.unity
+  DeveloperDescription:
+    _value: 
+  _list:
+  - {fileID: 11400000, guid: e0e9f6804a5b3424194677d41930a598, type: 2}
+  - {fileID: 11400000, guid: a476bd44659456946bc31cbb49864569, type: 2}

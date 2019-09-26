@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
@@ -17,8 +18,8 @@ public class GameManager : Singleton<GameManager>
         get { return Instance.resources; }
     }
 
-    [SerializeField] SceneReference menuScene;
-    [SerializeField] SceneReference uiScene;
+    [SerializeField] SceneReferencePlus menuScene;
+    [SerializeField] SceneReferencePlus uiScene;
 
     void Start()
     {
@@ -31,9 +32,9 @@ public class GameManager : Singleton<GameManager>
         SceneManager.LoadScene(menuScene);
     }
 
-    public void LoadLevel(SceneReference newLevel)
+    public void LoadLevel(SceneVariable newLevel)
     {
         SceneManager.LoadScene(uiScene);
-        SceneManager.LoadScene(newLevel, LoadSceneMode.Additive);
+        SceneManager.LoadScene(newLevel.Value.SceneIndex, LoadSceneMode.Additive);
     }
 }
