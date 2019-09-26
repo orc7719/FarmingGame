@@ -2449,6 +2449,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a3670c27ebef374bbd31a6ec381aa5b, type: 3}
+--- !u!1 &640455454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640455456}
+  - component: {fileID: 640455455}
+  m_Layer: 0
+  m_Name: Level Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &640455455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640455454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66486cfeeef4ac478fbb5b0c957ce9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPaused: 0
+  orderCompleteEvent: {fileID: 0}
+  gametimer: 180
+  completedOrders: 0
+  levelOrders: []
+  currentOrder:
+  - {fileID: 11400000, guid: 34f616e263012d549af844051ef6ce96, type: 2}
+  - {fileID: 11400000, guid: 1b8bb053bab43384d9345330147678cd, type: 2}
+  - {fileID: 11400000, guid: e67a10a3880b02b4784761f221fd48a5, type: 2}
+--- !u!4 &640455456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640455454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11546421, y: 0.010588518, z: -1.8442383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1005936681
 PrefabInstance:
   m_ObjectHideFlags: 0
