@@ -9,9 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12a9c0eccd6762b439ea4541bf69c8e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 2953c036c3bbfff4283215395edf0cd8, type: 3}
   m_Name: Level 01
   m_EditorClassIdentifier: 
-  levelScene:
-    sceneAsset: {fileID: 102900000, guid: 42bc34af1a5806342aa6126f1c9c33b0, type: 3}
-    scenePath: Assets/Scenes/Levels/Level 01.unity
+  DeveloperDescription:
+    _value: 
+  _value:
+    _sceneName: Assets/Scenes/Levels/Level 01.unity
+    _sceneIndex: 4
+    _isSceneEnabled: 1
+  _readOnly: 0
+  _raiseWarning: 1
+  _isClamped: 0
+  _minClampedValue:
+    _sceneName: 
+    _sceneIndex: -1
+    _isSceneEnabled: 0
+  _maxClampedValue:
+    _sceneName: 
+    _sceneIndex: -1
+    _isSceneEnabled: 0
