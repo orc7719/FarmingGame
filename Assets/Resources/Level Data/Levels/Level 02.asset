@@ -15,8 +15,8 @@ MonoBehaviour:
   DeveloperDescription:
     _value: 
   _value:
-    _sceneName: Assets/Scenes/Levels/Level 02 - Fixed.unity
-    _sceneIndex: -1
+    _sceneName: Assets/Scenes/Levels/Level 02.unity
+    _sceneIndex: 5
     _isSceneEnabled: 1
   _readOnly: 0
   _raiseWarning: 1
