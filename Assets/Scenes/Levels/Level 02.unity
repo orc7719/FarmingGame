@@ -2631,7 +2631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPaused: 0
   tutorial: 0
-  gametimer: 140
+  gametimer: 240
   completedOrders: 0
   levelOrders:
   - {fileID: 11400000, guid: f24182c87b4a6b84bbda97cce42b671d, type: 2}
