@@ -42,12 +42,14 @@ Shader "Custom/Sprite Outline" {
 				outlineC.a *= ceil(c.a);
 				outlineC.rgb *= outlineC.a;
 
-				fixed alpha_up = tex2D(_MainTex, i.uv + fixed2(0, _MainTex_TexelSize.y)).a;
-				fixed alpha_down = tex2D(_MainTex, i.uv - fixed2(0, _MainTex_TexelSize.y)).a;
-				fixed alpha_right = tex2D(_MainTex, i.uv + fixed2(_MainTex_TexelSize.x, 0)).a;
-				fixed alpha_left = tex2D(_MainTex, i.uv - fixed2(_MainTex_TexelSize.x, 0)).a;
+ fixed leftPixel = tex2D(_MainTex, i.uv + float2(-_MainTex_TexelSize.x, 0)).a;
+ fixed upPixel = tex2D(_MainTex, i.uv + float2(0, _MainTex_TexelSize.y)).a;
+ fixed rightPixel = tex2D(_MainTex, i.uv + float2(_MainTex_TexelSize.x, 0)).a;
+ fixed bottomPixel = tex2D(_MainTex, i.uv + float2(0, -_MainTex_TexelSize.y)).a;
+ 
+fixed outline = max(max(leftPixel, upPixel), max(rightPixel, bottomPixel)) - c.a;
 
-				return lerp(outlineC, c, ceil(alpha_up * alpha_down * alpha_right * alpha_left));
+return lerp(c, _Color, outline);
 			}   
 
 			ENDCG

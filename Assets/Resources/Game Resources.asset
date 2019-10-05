@@ -25,3 +25,7 @@ MonoBehaviour:
   beetObject: {fileID: 11400000, guid: 92d2708bc1a62a9498d1e28b1e531f3e, type: 2}
   allLevels: {fileID: 11400000, guid: 4476b5673bf5401428846e894bc21dcd, type: 2}
   orderCompleteEvent: {fileID: 11400000, guid: 9a55d63767be26649858b2bbd1a0362f, type: 2}
+  levelLockedColour: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 1}
+  levelUnlockedColour: {r: 0.9372549, g: 0.9372549, b: 0.9372549, a: 1}
+  levelCompletedColour: {r: 0.2784314, g: 0.79607844, b: 0.15686275, a: 1}
+  levelPerfectedColour: {r: 1, g: 0.9019608, b: 0, a: 1}
