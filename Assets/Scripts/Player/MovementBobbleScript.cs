@@ -10,13 +10,17 @@ public class MovementBobbleScript : MonoBehaviour
     int angleToBobble = 10;
     bool haventRecentlyReset = false;
     AudioSource footsteps;
+    Animator playerAnim;
+
     void Start()
     {
         ai = GetComponentInParent<AIPath>();
         footsteps = GetComponent<AudioSource>();
+        playerAnim = GetComponentInChildren<Animator>();
     }
     void Update()
     {
+        playerAnim.SetFloat("PlayerSpeed", ai.velocity.magnitude);
         if ((ai.velocity.magnitude > 0) && !ai.reachedEndOfPath)
         {
             if (!haventRecentlyReset)

@@ -18,6 +18,8 @@ public class InteractionScript : MonoBehaviour
     Vector2 moveTarget;
     float distanceToTarget;
 
+    Animator playerAnim;
+
     AudioSource audioSource;
 
     [SerializeField] GameEvent clickEvent;
@@ -30,6 +32,7 @@ public class InteractionScript : MonoBehaviour
         ai = GetComponent<AIPath>();
 
         audioSource = GetComponent<AudioSource>();
+        playerAnim = GetComponentInChildren<Animator>();
     }
 
     void Awake()
@@ -66,6 +69,11 @@ public class InteractionScript : MonoBehaviour
                 hasTarget = false;
             }
         }
+
+        if (PlayerItem.Instance.CurrentItem == null)
+            playerAnim.SetBool("CarryingItem", false);
+        else
+            playerAnim.SetBool("CarryingItem", true);
     }
 
     public void ScreenMouseRay()
