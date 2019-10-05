@@ -7,6 +7,7 @@ using ScriptableObjectArchitecture;
 public class InteractionScript : MonoBehaviour
 {
     public SpriteRenderer carryRend;
+    [SerializeField] GameObject carryObject;
     IInteractable interactTarget;
     bool hasTarget = true;
 
@@ -18,7 +19,7 @@ public class InteractionScript : MonoBehaviour
     Vector2 moveTarget;
     float distanceToTarget;
 
-    Animator playerAnim;
+    [SerializeField] Animator playerAnim;
 
     AudioSource audioSource;
 
@@ -32,7 +33,6 @@ public class InteractionScript : MonoBehaviour
         ai = GetComponent<AIPath>();
 
         audioSource = GetComponent<AudioSource>();
-        playerAnim = GetComponentInChildren<Animator>();
     }
 
     void Awake()
@@ -42,7 +42,7 @@ public class InteractionScript : MonoBehaviour
 
     void GetSettings()
     {
-        interactDistance = GameManager.Settings.interactDistance;
+        interactDistance = GameManager.Instance.settings.interactDistance;
     }
 
 
@@ -136,9 +136,11 @@ public class InteractionScript : MonoBehaviour
         {
             carryRend.sprite = PlayerItem.Instance.CurrentItem.itemSprite;
             audioSource.PlayOneShot(PlayerItem.Instance.CurrentItem.pickupSound);
+            carryObject.SetActive(true);
         }
         else
         {
+            carryObject.SetActive(false);
             carryRend.sprite = null;
             Debug.Log("No Item Found");
         }
