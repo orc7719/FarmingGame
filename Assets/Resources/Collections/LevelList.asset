@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: LevelList
   m_EditorClassIdentifier: 
   DeveloperDescription:
-    _value: 
+    _value: List of all the levels in the game
   _list:
-  - {fileID: 11400000, guid: e0e9f6804a5b3424194677d41930a598, type: 2}
+  - {fileID: 11400000, guid: a6a9f2afe4a08934f82375dcf6d55219, type: 2}
   - {fileID: 11400000, guid: a476bd44659456946bc31cbb49864569, type: 2}
   - {fileID: 11400000, guid: 6c2ca835204515a428423ad0dafdb7a7, type: 2}
   - {fileID: 11400000, guid: a8498d89996bf0745853b4a93317af6e, type: 2}
   - {fileID: 11400000, guid: 977270414128e044586b5125436522d4, type: 2}
-  - {fileID: 11400000, guid: a6a9f2afe4a08934f82375dcf6d55219, type: 2}

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using ScriptableObjectArchitecture;
+
 public class MainMenuScript : MonoBehaviour
 {
     public GameObject LevelSelect;
@@ -12,6 +14,7 @@ public class MainMenuScript : MonoBehaviour
     public AudioMixer masterAudio;
     public GameObject ExitButton;
     public LevelSelectionSetup levelList;
+    public SceneVariable tutorialScene;
 
     void Start()
     {
@@ -37,5 +40,10 @@ public class MainMenuScript : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadTutorial()
+    {
+        GameManager.Instance.LoadLevel(tutorialScene);
     }
 }
