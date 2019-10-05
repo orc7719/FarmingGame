@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using ScriptableObjectArchitecture;
 
 public class UIController : Singleton<UIController>
 {
@@ -10,6 +11,8 @@ public class UIController : Singleton<UIController>
     public TMP_Text timerText;
 
     [SerializeField] GameObject winPanel, losePanel;
+
+    [SerializeField] Animator orderAnim;
 
     #region PauseMenu
     public void Pause()
@@ -88,5 +91,15 @@ public class UIController : Singleton<UIController>
     public void ShowLosePanel()
     {
         losePanel.SetActive(true);
+    }
+
+    public void CompleteOrder()
+    {
+        orderAnim.SetTrigger("OrderCompleted");
+    }
+
+    public void GetNewOrder()
+    {
+        orderAnim.SetTrigger("ResetOrder");
     }
 }

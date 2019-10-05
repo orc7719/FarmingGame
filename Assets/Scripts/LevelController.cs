@@ -99,9 +99,14 @@ public class LevelController : Singleton<LevelController>
             }
             else
             {
-                currentOrder = GetNewOrder();
+                UIController.Instance.CompleteOrder();
             }
         }
+    }
+
+    public void UpdateCurrentOrder()
+    {
+        currentOrder = GetNewOrder();
     }
 
     public List<Crop> GetNewOrder()
