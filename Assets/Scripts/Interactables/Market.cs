@@ -16,6 +16,11 @@ public class Market : MonoBehaviour, IInteractable
     [SerializeField] GameEvent incorrectItemEvent;
     [SerializeField] GameEvent orderCompleteEvent;
 
+    [SerializeField] NotificationDisplay notifications;
+
+    [Header("Notification Sprites")]
+    [SerializeField] Sprite sellSprite;
+
     bool doExtraOrders;
 
     void Start()
@@ -33,6 +38,7 @@ public class Market : MonoBehaviour, IInteractable
                PlayerItem.Instance.DestroyItem();
 
                 correctItemEvent.Raise();
+                correctParticle.Play();
 
                 UIController.Instance.UpdateOrderDisplay();
             }
