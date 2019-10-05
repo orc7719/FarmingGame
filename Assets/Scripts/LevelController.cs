@@ -23,6 +23,10 @@ public class LevelController : Singleton<LevelController>
     [SerializeField] List<CropCollection> levelOrders = new List<CropCollection>();
     public List<Crop> currentOrder = new List<Crop>();
 
+    public int GetRemainingTime()
+    {
+        return gametimer;
+    }
 
     void Start()
     {
