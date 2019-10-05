@@ -41,11 +41,7 @@ public class UIController : Singleton<UIController>
     public void UpdateTimer(int newTime)
     {
         newTime = Mathf.Clamp(newTime, 0, newTime);
-
-        int seconds = (newTime % 60); //converts to seconds
-        int minutes = (newTime / 60) % 60; //converts to minuits
-
-        timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
+        timerText.text = newTime.ToString("000");
 
     }
 
