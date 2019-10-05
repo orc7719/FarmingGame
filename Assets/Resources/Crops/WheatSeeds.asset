@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: WheatSeeds
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: c32e88ceb9565394392126e87530f28f, type: 3}
-  seedStage: {fileID: 21300000, guid: 35c95ef103d72624a99fd7044d87fb6b, type: 3}
-  grownStage: {fileID: 21300000, guid: 72d8fa2541d67504f9bae5870f7a829a, type: 3}
-  deadStage: {fileID: 21300000, guid: e980792a85001eb4fae059684761d73a, type: 3}
+  pickupSound: {fileID: 0}
+  seedStage: {fileID: 21300000, guid: 79ae6293b44256e4a9a2810ac97ee9c3, type: 3}
+  grownStage: {fileID: 21300000, guid: d02d8e82ff1d77b42b815dd44a732651, type: 3}
+  deadStage: {fileID: 21300000, guid: 80085d8a40ae7654cad72d1fcdc1c87a, type: 3}
   grownItem: {fileID: 11400000, guid: e67a10a3880b02b4784761f221fd48a5, type: 2}
