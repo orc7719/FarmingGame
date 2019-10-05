@@ -21,4 +21,10 @@ public class GameResources : ScriptableSingleton<GameResources>
     [Header("Level Data")]
     public SceneCollection allLevels;
     public GameEvent orderCompleteEvent;
+
+    [Header("UI Colours")]
+    public Color levelLockedColour;
+    public Color levelUnlockedColour;
+    public Color levelCompletedColour;
+    public Color levelPerfectedColour;
 }

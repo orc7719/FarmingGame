@@ -5,8 +5,8 @@ using UnityEngine;
 public class MenuCameraScript : MonoBehaviour
 {
     [SerializeField] Transform player;
-    float elasticity = 1.5f;
-    float lerpRate = 0.01f;
+    [SerializeField] float elasticity = 1.5f;
+    [SerializeField] float lerpRate = 0.01f;
     int z;
     void Start()
     {
