@@ -18,7 +18,7 @@ public class LevelSelectionSetup : MonoBehaviour
         for (int i = 0; i < GameManager.Resources.allLevels.List.Count; i++)
         {
             GameObject newLevel = Instantiate(levelSelectPrefab, contentHolder);
-            newLevel.GetComponent<LevelButton>().SetupButton(GameManager.Resources.allLevels[i], i);
+            newLevel.GetComponent<LevelButton>().SetupButton(GameManager.Resources.allLevels[i], i + 1);
             levelObjects.Add(newLevel);
         }
     }

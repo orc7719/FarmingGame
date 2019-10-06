@@ -11,15 +11,12 @@ public class Market : MonoBehaviour, IInteractable
 
     [SerializeField]
     ParticleSystem correctParticle;
+    [SerializeField]
+    ParticleSystem incorrectParticle;
 
     [SerializeField] GameEvent correctItemEvent;
     [SerializeField] GameEvent incorrectItemEvent;
     [SerializeField] GameEvent orderCompleteEvent;
-
-    [SerializeField] NotificationDisplay notifications;
-
-    [Header("Notification Sprites")]
-    [SerializeField] Sprite sellSprite;
 
     bool doExtraOrders;
 
@@ -44,6 +41,7 @@ public class Market : MonoBehaviour, IInteractable
             }
             else
             {
+                incorrectParticle.Play();
                 incorrectItemEvent.Raise();
             }
         }
