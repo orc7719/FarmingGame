@@ -15,9 +15,9 @@ MonoBehaviour:
   DeveloperDescription:
     _value: 
   _value:
-    _sceneName: 
-    _sceneIndex: -1
-    _isSceneEnabled: 0
+    _sceneName: Assets/Scenes/Levels/_Tutorial.unity
+    _sceneIndex: 3
+    _isSceneEnabled: 1
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0
