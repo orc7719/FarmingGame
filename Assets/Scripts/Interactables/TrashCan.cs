@@ -5,8 +5,8 @@ using ScriptableObjectArchitecture;
 
 public class TrashCan : MonoBehaviour, IInteractable
 {
-    SpriteRenderer rend;
-    [SerializeField] GameEvent interactEvent;
+    SpriteRenderer rend = null;
+    [SerializeField] GameEvent interactEvent = null;
 
     public void Interact()
     {

@@ -78,7 +78,7 @@ namespace ScriptableObjectArchitecture
         #endif
 
         [SerializeField]
-        private string _sceneName;
+        private string _sceneName = null;
 
         [SerializeField]
         private int _sceneIndex;

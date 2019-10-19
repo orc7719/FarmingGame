@@ -5,7 +5,7 @@ using ScriptableObjectArchitecture;
 
 public class EventRaise : MonoBehaviour
 {
-    [SerializeField] GameEvent eventToRaise;
+    [SerializeField] GameEvent eventToRaise = null;
 
     public void RaiseEvent()
     {

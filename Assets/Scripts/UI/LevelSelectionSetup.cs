@@ -5,8 +5,8 @@ using ScriptableObjectArchitecture;
 
 public class LevelSelectionSetup : MonoBehaviour
 {
-    [SerializeField] Transform contentHolder;
-    [SerializeField] GameObject levelSelectPrefab;
+    [SerializeField] Transform contentHolder = null;
+    [SerializeField] GameObject levelSelectPrefab = null;
 
     List<GameObject> levelObjects = new List<GameObject>();
 

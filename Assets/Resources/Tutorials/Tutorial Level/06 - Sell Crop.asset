@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dddadfe99f61a94a90a8f3836c63b34, type: 3}
+  m_Name: 06 - Sell Crop
+  m_EditorClassIdentifier: 
+  nextStage: {fileID: 11400000, guid: 554827f1c76877e4e9cbb2f398206cb2, type: 2}
+  triggerEvent: {fileID: 11400000, guid: 0beb9bdd7a141d84c8f01ab0826f32b9, type: 2}
+  stateText: Nice! Now that you have grown a crop you can sell it at the market. Tap
+    on the market to deliver the crop.
+  itemSprite: {fileID: 21300000, guid: df0e4c2cf86c7c941ae563ad512b6b6d, type: 3}
+  targetItem: {fileID: 0}
+  failStates: []

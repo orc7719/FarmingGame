@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dddadfe99f61a94a90a8f3836c63b34, type: 3}
+  m_Name: 05 - Harvest Crop
+  m_EditorClassIdentifier: 
+  nextStage: {fileID: 11400000, guid: ec738e24b426c7f4f9a2df65003d1732, type: 2}
+  triggerEvent: {fileID: 11400000, guid: f8721f3854c2ee047969dc90f39bf082, type: 2}
+  stateText: When a crop has grown it will show an indicator to say it is ready to
+    be harvested. Tap on the crop to harvest it.
+  itemSprite: {fileID: 21300000, guid: c4c8ff7f309186a48928e17076bec9e9, type: 3}
+  targetItem: {fileID: 0}
+  failStates: []

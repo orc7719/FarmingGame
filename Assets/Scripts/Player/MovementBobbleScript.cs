@@ -5,13 +5,10 @@ using Pathfinding;
 
 public class MovementBobbleScript : MonoBehaviour
 {
-    AIPath ai;
-    float bobbleRate = 100f;
-    int angleToBobble = 10;
-    bool haventRecentlyReset = false;
-    AudioSource footsteps;
-    [SerializeField] Animator playerAnim;
-    [SerializeField] Animator bobbleAnim;
+    AIPath ai = null;
+    AudioSource footsteps = null;
+    [SerializeField] Animator playerAnim = null;
+    [SerializeField] Animator bobbleAnim = null;
 
     void Start()
     {

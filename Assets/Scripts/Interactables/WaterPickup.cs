@@ -5,8 +5,8 @@ using ScriptableObjectArchitecture;
 
 public class WaterPickup : MonoBehaviour, IInteractable
 {
-    [SerializeField] Item bucketItem;
-    [SerializeField] GameEvent interactEvent;
+    [SerializeField] Item bucketItem = null;
+    [SerializeField] GameEvent interactEvent = null;
 
     public void Interact()
     {

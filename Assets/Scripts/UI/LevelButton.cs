@@ -7,8 +7,8 @@ using ScriptableObjectArchitecture;
 
 public class LevelButton : MonoBehaviour
 {
-    [SerializeField] TMP_Text levelIdText;
-    SceneVariable gameLevel;
+    [SerializeField] TMP_Text levelIdText = null;
+    SceneVariable gameLevel = null;
 
     public void SetupButton(SceneVariable newLevel, int levelNum)
     {

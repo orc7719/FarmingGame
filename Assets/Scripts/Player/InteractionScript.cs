@@ -6,26 +6,24 @@ using ScriptableObjectArchitecture;
 
 public class InteractionScript : MonoBehaviour
 {
-    public SpriteRenderer carryRend;
-    [SerializeField] GameObject carryObject;
-    IInteractable interactTarget;
+    public SpriteRenderer carryRend = null;
+    [SerializeField] GameObject carryObject = null;
+    IInteractable interactTarget = null;
     bool hasTarget = true;
 
-    float interactDistance;
+    AIPath ai = null;
+    float pathWait = 0f;
 
-    AIPath ai;
-    float pathWait;
+    Vector2 moveTarget = Vector2.zero;
+    float distanceToTarget = 0f;
 
-    Vector2 moveTarget;
-    float distanceToTarget;
+    [SerializeField] Animator playerAnim = null;
 
-    [SerializeField] Animator playerAnim;
+    AudioSource audioSource = null;
 
-    AudioSource audioSource;
-
-    [SerializeField] GameEvent clickEvent;
-    [SerializeField] GameEvent clickInteractEvent;
-    [SerializeField] GameObject touchParticle;
+    [SerializeField] GameEvent clickEvent = null;
+    [SerializeField] GameEvent clickInteractEvent = null;
+    [SerializeField] GameObject touchParticle = null;
 
     private void Start()
     {
@@ -42,7 +40,7 @@ public class InteractionScript : MonoBehaviour
 
     void GetSettings()
     {
-        interactDistance = GameManager.Instance.settings.interactDistance;
+
     }
 
 

@@ -5,30 +5,31 @@ using ScriptableObjectArchitecture;
 
 public class CropTile : MonoBehaviour, IInteractable
 {
-    [SerializeField] Seed currentCrop;
-    TileState currentState;
+    [SerializeField] Seed currentCrop = null;
+    TileState currentState = TileState.Dirt;
 
-    SpriteRenderer spriteRend;
-    [SerializeField] SpriteRenderer cropRend;
+    SpriteRenderer spriteRend = null;
+    [SerializeField] SpriteRenderer cropRend = null;
 
-    [SerializeField] NotificationDisplay notification;
+    [SerializeField] NotificationDisplay notification = null;
 
-    Sprite dirtSprite;
-    Sprite wateredSprite;
+    Sprite dirtSprite = null;
+    Sprite wateredSprite = null;
 
     float plantedTime;
-    [SerializeField] GameEvent waterEvent;
-    [SerializeField] GameEvent plantEvent;
-    [SerializeField] GameEvent grownEvent;
-    [SerializeField] GameEvent harvestEvent;
-    [SerializeField] GameEvent spoilEvent;
+    [SerializeField] GameEvent waterEvent = null;
+    [SerializeField] GameEvent plantEvent = null;
+    [SerializeField] GameEvent grownEvent = null;
+    [SerializeField] GameEvent harvestEvent = null;
+    [SerializeField] GameEvent spoilEvent = null;
+    [SerializeField] GameEvent deadHarvestEvent = null;
 
     [Header("Sprites")]
-    [SerializeField] Sprite waterSprite;
-    [SerializeField] Sprite grownSprite;
-    [SerializeField] Sprite warning1Sprite;
-    [SerializeField] Sprite warning2Sprite;
-    [SerializeField] Sprite deadSprite;
+    [SerializeField] Sprite waterSprite = null;
+    [SerializeField] Sprite grownSprite = null;
+    [SerializeField] Sprite warning1Sprite = null;
+    [SerializeField] Sprite warning2Sprite = null;
+    [SerializeField] Sprite deadSprite = null;
 
     private void Awake()
     {
@@ -77,7 +78,7 @@ public class CropTile : MonoBehaviour, IInteractable
                 CollectCrop();
                 break;
             case TileState.Dead:
-                harvestEvent.Raise();
+                deadHarvestEvent.Raise();
                 currentState = TileState.Dirt;
                 currentCrop = null;
                 break;
@@ -128,7 +129,6 @@ public class CropTile : MonoBehaviour, IInteractable
             if (Time.time >= plantedTime + GameManager.Settings.cropSpoilTime)
             {
                 currentState = TileState.Dead;
-                notification.DisplayNewSprite(deadSprite);
                 spoilEvent.Raise();
                 UpdateCropSprite();
             }
@@ -140,6 +140,10 @@ public class CropTile : MonoBehaviour, IInteractable
             {
                 notification.DisplayNewSprite(warning1Sprite);
             }
+        }
+        else if (currentState == TileState.Dead)
+        {
+            notification.DisplayNewSprite(deadSprite);
         }
         else
         {

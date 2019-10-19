@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dddadfe99f61a94a90a8f3836c63b34, type: 3}
+  m_Name: 03b - Not Seeds
+  m_EditorClassIdentifier: 
+  nextStage: {fileID: 11400000, guid: 61cb23e2060a8574ea5a5c75a1188a93, type: 2}
+  triggerEvent: {fileID: 11400000, guid: 8c82fd39b4ae685478db713f3f2daa7f, type: 2}
+  stateText: Good. Next you will need some seeds, tap the silo to collect some. The
+    icon on the front shows what seeds they contain.
+  itemSprite: {fileID: 21300000, guid: 05da0ec389f5b254dbf36f95e3e5ae2d, type: 3}
+  targetItem: {fileID: 11400000, guid: 08e23ea6d61e8f440b88bcf136805314, type: 2}
+  failStates:
+  - failEvent: {fileID: 11400000, guid: 6115852c26a5d894aa48d2a6d0ae7195, type: 2}
+    failState: {fileID: 11400000, guid: 2f36bcad8d8cc3841ac64132e9332c6d, type: 2}

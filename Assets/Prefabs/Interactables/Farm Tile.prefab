@@ -274,6 +274,7 @@ MonoBehaviour:
   grownEvent: {fileID: 11400000, guid: 70e2d661940bd1843af59dfa5ed2b4d0, type: 2}
   harvestEvent: {fileID: 11400000, guid: f8721f3854c2ee047969dc90f39bf082, type: 2}
   spoilEvent: {fileID: 11400000, guid: 21bb0306c9f91174798a6219298babf3, type: 2}
+  deadHarvestEvent: {fileID: 11400000, guid: 5290b0415525b6e478a90ff19e8b8c13, type: 2}
   waterSprite: {fileID: 21300000, guid: 5d7cd0042191d3c4dbbd7f82410c8453, type: 3}
   grownSprite: {fileID: 21300000, guid: 142c4f6b4e662294f82ce941af0e9932, type: 3}
   warning1Sprite: {fileID: 21300000, guid: ed94721069d17b64b9847b46426187cc, type: 3}

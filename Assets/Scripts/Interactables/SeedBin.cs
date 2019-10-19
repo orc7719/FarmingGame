@@ -5,10 +5,10 @@ using ScriptableObjectArchitecture;
 
 public class SeedBin : MonoBehaviour, IInteractable
 {
-    public Seed seedItem;
-    SpriteRenderer rend;
-    [SerializeField] SpriteRenderer binIcon;
-    [SerializeField] GameEvent interactEvent;
+    public Seed seedItem = null;
+    SpriteRenderer rend = null;
+    [SerializeField] SpriteRenderer binIcon = null;
+    [SerializeField] GameEvent interactEvent = null;
 
     public void Interact()
     {

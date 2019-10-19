@@ -6,14 +6,14 @@ using ScriptableObjectArchitecture;
 
 public class UIController : Singleton<UIController>
 {
-    [SerializeField] TMP_Text wheatCountText, carrotCountText, potatoCountText, beetCountText;
-    public GameObject pausemenu, PauseButton;
-    public TMP_Text timerText;
+    [SerializeField] TMP_Text wheatCountText = null, carrotCountText = null, potatoCountText = null, beetCountText = null;
+    public GameObject pausemenu = null, PauseButton = null;
+    public TMP_Text timerText = null;
 
-    [SerializeField] GameObject winPanel, losePanel;
+    [SerializeField] GameObject winPanel = null, losePanel = null;
 
-    [SerializeField] Animator orderAnim;
-    [SerializeField] TMP_Text winTimeText;
+    [SerializeField] Animator orderAnim = null;
+    [SerializeField] TMP_Text winTimeText = null;
 
     #region PauseMenu
     public void Pause()

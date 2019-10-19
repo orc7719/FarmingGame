@@ -18,8 +18,8 @@ public class GameManager : Singleton<GameManager>
         get { return Instance.resources; }
     }
 
-    [SerializeField] SceneReferencePlus menuScene;
-    [SerializeField] SceneReferencePlus uiScene;
+    [SerializeField] SceneReferencePlus menuScene = null;
+    [SerializeField] SceneReferencePlus uiScene = null;
 
     void Start()
     {

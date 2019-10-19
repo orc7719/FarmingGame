@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MenuCameraScript : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] Transform player = null;
     [SerializeField] float elasticity = 1.5f;
     [SerializeField] float lerpRate = 0.01f;
     int z;

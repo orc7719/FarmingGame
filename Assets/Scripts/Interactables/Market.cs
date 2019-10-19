@@ -5,20 +5,14 @@ using ScriptableObjectArchitecture;
 
 public class Market : MonoBehaviour, IInteractable
 {
-    public GameEvent orderComplete;
-    //int completedOrders = 0;
-    SpriteRenderer rend;
+    public GameEvent orderComplete = null;
+    SpriteRenderer rend = null;
 
-    [SerializeField]
-    ParticleSystem correctParticle;
-    [SerializeField]
-    ParticleSystem incorrectParticle;
+    [SerializeField] ParticleSystem correctParticle = null;
+    [SerializeField] ParticleSystem incorrectParticle = null;
 
-    [SerializeField] GameEvent correctItemEvent;
-    [SerializeField] GameEvent incorrectItemEvent;
-    [SerializeField] GameEvent orderCompleteEvent;
-
-    bool doExtraOrders;
+    [SerializeField] GameEvent correctItemEvent = null;
+    [SerializeField] GameEvent incorrectItemEvent = null;
 
     void Start()
     {
