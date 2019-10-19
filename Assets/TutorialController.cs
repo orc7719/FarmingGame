@@ -15,6 +15,12 @@ public class TutorialController : Singleton<TutorialController>
     [SerializeField] GameObject itemDisplay = null;
     [SerializeField] Image itemSprite = null;
 
+    [SerializeField] GameObject seedsMarker;
+    [SerializeField] GameObject cropMarker;
+    [SerializeField] GameObject waterMarker;
+    [SerializeField] GameObject marketMarker;
+    [SerializeField] GameObject binMarker;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -26,9 +32,15 @@ public class TutorialController : Singleton<TutorialController>
             anim.SetTrigger("OnClick");
     }
 
-    public void UpdateTutorialUI(string newDialogue, Sprite newItemSprite)
+    public void UpdateTutorialUI(string newDialogue, Sprite newItemSprite, bool markSeeds, bool markCrop, bool markWater, bool markMarket, bool markBin)
     {
         ResetTriggers();
+
+        seedsMarker.SetActive(markSeeds);
+        cropMarker.SetActive(markCrop);
+        waterMarker.SetActive(markWater);
+        marketMarker.SetActive(markMarket);
+        binMarker.SetActive(markBin);
 
         StopCoroutine("DisplayText");
         StartCoroutine("DisplayText", newDialogue);

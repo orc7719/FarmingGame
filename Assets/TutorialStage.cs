@@ -8,10 +8,16 @@ public class TutorialStage : StateMachineBehaviour
     [TextArea] [SerializeField] string stateText = "";
     [SerializeField] Sprite stateItemSprite = null;
 
+    [SerializeField] bool markSeeds;
+    [SerializeField] bool markCrop;
+    [SerializeField] bool markWater;
+    [SerializeField] bool markMarket;
+    [SerializeField] bool markBin;
+
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        TutorialController.Instance.UpdateTutorialUI(stateText, stateItemSprite);
+        TutorialController.Instance.UpdateTutorialUI(stateText, stateItemSprite, markSeeds, markCrop, markWater, markMarket, markBin);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
