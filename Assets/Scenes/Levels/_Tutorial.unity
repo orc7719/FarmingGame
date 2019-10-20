@@ -3045,7 +3045,8 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: c657e5d900107e747b846c2924cb4bd6,
+    type: 2}
   _event: {fileID: 11400000, guid: c657e5d900107e747b846c2924cb4bd6, type: 2}
   _response:
     m_PersistentCalls:
@@ -4283,7 +4284,7 @@ PrefabInstance:
     - target: {fileID: 1201350856425695756, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: levelOrders.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1201350856425695756, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
@@ -4299,8 +4300,14 @@ PrefabInstance:
     - target: {fileID: 1201350856425695756, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: tutorial
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1201350856425695756, guid: 17d2566928d27f148a69509feb6a17a9,
+        type: 3}
+      propertyPath: levelOrders.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c1d62e3f6419e44ca6bad6c20c683a7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17d2566928d27f148a69509feb6a17a9, type: 3}
 --- !u!1 &1522382383
@@ -9051,17 +9058,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1546422371058535508, guid: c9719934cbe4d4341ba3ec96d24f076b,
-        type: 3}
-      propertyPath: levelOrders.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546422371058535508, guid: c9719934cbe4d4341ba3ec96d24f076b,
-        type: 3}
-      propertyPath: levelOrders.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8c82dfc0dcca29947a83121cf2a7b1b4,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9719934cbe4d4341ba3ec96d24f076b, type: 3}
 --- !u!4 &1546422371098424105 stripped

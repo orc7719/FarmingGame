@@ -6,17 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameSettings settings;
-    public static GameSettings Settings
-    {
-        get { return Instance.settings; }
-    }
+    public static GameSettings Settings { get { return GameSettings.Instance; } }
 
-    public GameResources resources;
-    public static GameResources Resources
-    {
-        get { return Instance.resources; }
-    }
+    public static GameResources Resources { get { return GameResources.Instance; } }
 
     [SerializeField] SceneReferencePlus menuScene = null;
     [SerializeField] SceneReferencePlus uiScene = null;

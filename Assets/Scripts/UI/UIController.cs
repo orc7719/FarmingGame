@@ -10,7 +10,7 @@ public class UIController : Singleton<UIController>
     public GameObject pausemenu = null, PauseButton = null;
     public TMP_Text timerText = null;
 
-    [SerializeField] GameObject winPanel = null, losePanel = null;
+    [SerializeField] GameObject winPanel = null, losePanel = null, helpMenu = null;
 
     [SerializeField] Animator orderAnim = null;
     [SerializeField] TMP_Text winTimeText = null;
@@ -103,5 +103,24 @@ public class UIController : Singleton<UIController>
     public void GetNewOrder()
     {
         orderAnim.SetTrigger("ResetOrder");
+    }
+
+    public void OpenHelp()
+    {
+
+        helpMenu.SetActive(true);
+        //PauseButton.SetActive(false);
+
+        LevelController.Instance.levelPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void CloseHelp()
+    {
+        helpMenu.SetActive(false);
+        //PauseButton.SetActive(true);
+
+        LevelController.Instance.levelPaused = false;
+        Time.timeScale = 1;
     }
 }

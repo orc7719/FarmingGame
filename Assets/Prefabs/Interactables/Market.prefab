@@ -272,7 +272,6 @@ MonoBehaviour:
   incorrectParticle: {fileID: 8306633747527127981}
   correctItemEvent: {fileID: 11400000, guid: 0beb9bdd7a141d84c8f01ab0826f32b9, type: 2}
   incorrectItemEvent: {fileID: 11400000, guid: ad4b8681c17203843b8db3f663671f72, type: 2}
-  orderCompleteEvent: {fileID: 11400000, guid: 9a55d63767be26649858b2bbd1a0362f, type: 2}
 --- !u!1 &2636447601451294321
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +556,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.35
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5368,7 +5367,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.35
+      scalar: 0.15
       minScalar: 1
       maxCurve:
         serializedVersion: 2
