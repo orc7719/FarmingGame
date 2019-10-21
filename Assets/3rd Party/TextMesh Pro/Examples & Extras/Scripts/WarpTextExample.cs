@@ -14,18 +14,22 @@ namespace TMPro.Examples
         public float AngleMultiplier = 1.0f;
         public float SpeedMultiplier = 1.0f;
         public float CurveScale = 1.0f;
+        public bool hasUpdated;
 
         void Awake()
         {
             m_TextComponent = gameObject.GetComponent<TMP_Text>();
         }
 
-
-        void Start()
+        void OnEnable()
         {
             StartCoroutine(WarpText());
         }
 
+        void OnDisable()
+        {
+            StopCoroutine(WarpText());
+        }
 
         private AnimationCurve CopyAnimationCurve(AnimationCurve curve)
         {
@@ -44,6 +48,7 @@ namespace TMPro.Examples
         /// <returns></returns>
         IEnumerator WarpText()
         {
+            hasUpdated = false;
             VertexCurve.preWrapMode = WrapMode.Clamp;
             VertexCurve.postWrapMode = WrapMode.Clamp;
 
@@ -53,13 +58,15 @@ namespace TMPro.Examples
             Matrix4x4 matrix;
 
             m_TextComponent.havePropertiesChanged = true; // Need to force the TextMeshPro Object to be updated.
-            CurveScale *= 10;
+            //CurveScale *= 10;
             float old_CurveScale = CurveScale;
             AnimationCurve old_curve = CopyAnimationCurve(VertexCurve);
 
+            yield return new WaitForSeconds(0.41f);
+
             while (true)
             {
-                if (!m_TextComponent.havePropertiesChanged && old_CurveScale == CurveScale && old_curve.keys[1].value == VertexCurve.keys[1].value)
+                if (!m_TextComponent.havePropertiesChanged && old_CurveScale == CurveScale && old_curve.keys[1].value == VertexCurve.keys[1].value && hasUpdated == true)
                 {
                     yield return null;
                     continue;
@@ -136,7 +143,7 @@ namespace TMPro.Examples
 
                 // Upload the mesh with the revised information
                 m_TextComponent.UpdateVertexData();
-
+                hasUpdated = true;
                 yield return new WaitForSeconds(0.025f);
             }
         }
