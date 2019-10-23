@@ -27,4 +27,7 @@ public class GameResources : ScriptableSingleton<GameResources>
     public Color levelUnlockedColour;
     public Color levelCompletedColour;
     public Color levelPerfectedColour;
+
+    [Header("Prefabs")]
+    public Managers manager;
 }

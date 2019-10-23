@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12a9c0eccd6762b439ea4541bf69c8e8, type: 3}
-  m_Name: Level 02 - Getting Started
+  m_Name: Level 03 - New Crops
   m_EditorClassIdentifier: 
-  levelId: 2
-  levelName: Getting Started
-  levelPreview: {fileID: 21300000, guid: 7fdc25aebac70aa499217451c47c2a99, type: 3}
+  levelId: 3
+  levelName: New Crops
+  levelPreview: {fileID: 21300000, guid: f6c9f38c88403bb40bb071ad1a13d5f8, type: 3}
   levelScene:
-    sceneAsset: {fileID: 102900000, guid: ad93554afbfc6514484e8765990ad64a, type: 3}
-    scenePath: Assets/Scenes/Levels/Level 02.unity
+    sceneAsset: {fileID: 102900000, guid: 8b1a71e3df8fa3f4db03712b9b51f24b, type: 3}
+    scenePath: Assets/Scenes/Levels/Level 03.unity
   personalBest: 0

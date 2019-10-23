@@ -37,7 +37,7 @@ public class UIController : Singleton<UIController>
 
     public void ReturnToMenu()
     {
-        GameManager.Instance.ReturnToMenu();
+        LoadingManager.Instance.ReturnToMenu();
     }
 
     #endregion

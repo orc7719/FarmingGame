@@ -14,7 +14,7 @@ public class MainMenuScript : MonoBehaviour
     public AudioMixer masterAudio;
     public GameObject ExitButton;
     public LevelSelectionSetup levelList;
-    public SceneVariable tutorialScene;
+    public SceneReferencePlus tutorialScene;
 
     void Start()
     {
@@ -44,6 +44,6 @@ public class MainMenuScript : MonoBehaviour
 
     public void LoadTutorial()
     {
-        GameManager.Instance.LoadLevel(tutorialScene);
+        LoadingManager.Instance.LoadLevel(tutorialScene);
     }
 }

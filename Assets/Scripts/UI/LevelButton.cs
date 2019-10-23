@@ -8,9 +8,9 @@ using ScriptableObjectArchitecture;
 public class LevelButton : MonoBehaviour
 {
     [SerializeField] TMP_Text levelIdText = null;
-    SceneVariable gameLevel = null;
+    SceneReferencePlus gameLevel = null;
 
-    public void SetupButton(SceneVariable newLevel, int levelNum)
+    public void SetupButton(SceneReferencePlus newLevel, int levelNum)
     {
         gameLevel = newLevel;
         levelIdText.text = levelNum.ToString(" 00");
@@ -18,6 +18,6 @@ public class LevelButton : MonoBehaviour
 
     public void LoadNewLevel()
     {
-        GameManager.Instance.LoadLevel(gameLevel);
+        LoadingManager.Instance.LoadLevel(gameLevel);
     }
 }

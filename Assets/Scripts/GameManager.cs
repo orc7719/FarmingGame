@@ -1,32 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ScriptableObjectArchitecture;
-using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    public static GameSettings Settings { get { return GameSettings.Instance; } }
+    private static string debugTag = "[GameManager]";
 
+    public static GameSettings Settings { get { return GameSettings.Instance; } }
     public static GameResources Resources { get { return GameResources.Instance; } }
 
-    [SerializeField] SceneReferencePlus menuScene = null;
-    [SerializeField] SceneReferencePlus uiScene = null;
-
-    void Start()
+    private static Managers managers;
+    private static Managers Managers
     {
-        SceneManager.LoadScene(menuScene);
+        get
+        {
+            if(managers == null)
+            {
+                if(managers == null)
+                {
+                    managers = FindObjectOfType<Managers>();
+                }
+                if(managers != null)
+                {
+                    Debug.LogFormat("{0} Managers found in the scene.", debugTag);
+                }
+                else
+                {
+                    managers = Instantiate(Resources.manager);
+                    Debug.LogFormat("{0} Managers instantiated.", debugTag);
+                }
+            }
+            return managers;
+        }
     }
 
-
-    public void ReturnToMenu()
+    public static void Setup()
     {
-        SceneManager.LoadScene(menuScene);
-    }
-
-    public void LoadLevel(SceneVariable newLevel)
-    {
-        SceneManager.LoadScene(uiScene);
-        SceneManager.LoadScene(newLevel.Value.SceneIndex, LoadSceneMode.Additive);
+        managers = Managers;
     }
 }

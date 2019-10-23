@@ -29,3 +29,4 @@ MonoBehaviour:
   levelUnlockedColour: {r: 0.9372549, g: 0.9372549, b: 0.9372549, a: 1}
   levelCompletedColour: {r: 0.2784314, g: 0.79607844, b: 0.15686275, a: 1}
   levelPerfectedColour: {r: 1, g: 0.9019608, b: 0, a: 1}
+  manager: {fileID: 7635439152846547665, guid: 9c5e4fc6404b17241afae2aa4e05884f, type: 3}
