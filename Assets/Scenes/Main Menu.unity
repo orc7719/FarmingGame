@@ -3242,6 +3242,7 @@ MonoBehaviour:
   levelNameText: {fileID: 1486802411}
   levelPreviewImage: {fileID: 1295660963}
   personalBestText: {fileID: 0}
+  playButton: {fileID: 1872772852}
   currentlySelectedLevel:
     sceneAsset: {fileID: 0}
     scenePath: 
@@ -4934,7 +4935,7 @@ MonoBehaviour:
       AnimationType: 2
       Move:
         AnimationType: 2
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
         By: {x: 0, y: 0, z: 0}
@@ -4945,8 +4946,8 @@ MonoBehaviour:
         LoopType: 1
         Direction: 3
         CustomPosition: {x: 0, y: 0, z: 0}
-        EaseType: 1
-        Ease: 29
+        EaseType: 0
+        Ease: 18
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -5007,13 +5008,13 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0
-        Duration: 0.5
+        StartDelay: 0.2
+        Duration: 0.2
       Rotate:
         AnimationType: 2
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
-        To: {x: 0, y: 180, z: 0}
+        To: {x: 0, y: 0, z: -90}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -5022,7 +5023,7 @@ MonoBehaviour:
         LoopType: 1
         RotateMode: 0
         EaseType: 0
-        Ease: 26
+        Ease: 23
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
@@ -5098,7 +5099,7 @@ MonoBehaviour:
         AnimationType: 2
         Enabled: 1
         From: {x: 0, y: 0, z: 0}
-        To: {x: 1.2, y: 1.2, z: 1}
+        To: {x: 0.9, y: 1.5, z: 1}
         By: {x: 0, y: 0, z: 0}
         UseCustomFromAndTo: 0
         Vibrato: 10
@@ -5106,51 +5107,42 @@ MonoBehaviour:
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
-        Ease: 25
+        Ease: 22
         AnimationCurve:
           serializedVersion: 2
           m_Curve:
           - serializedVersion: 3
             time: 0
             value: 0
-            inSlope: -6.503698
-            outSlope: -6.503698
+            inSlope: -5.9445815
+            outSlope: -5.9445815
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.10492328
-            value: -0.2293109
-            inSlope: 4.185171
-            outSlope: 4.185171
+            time: 0.16861793
+            value: -0.6560375
+            inSlope: 1.6450882
+            outSlope: 1.6450882
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.24543402
-            value: 0.03323266
-            inSlope: -1.7219948
-            outSlope: -1.7219948
+            time: 0.39923504
+            value: 1.2821069
+            inSlope: 0.10174093
+            outSlope: 0.10174093
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
             outWeight: 0.33333334
           - serializedVersion: 3
-            time: 0.4196215
-            value: 0.15156424
-            inSlope: -2.7061355
-            outSlope: -2.7061355
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
-          - serializedVersion: 3
-            time: 0.592863
-            value: 0.27791208
-            inSlope: -1.6045417
-            outSlope: -1.6045417
+            time: 0.5896755
+            value: 0.7484784
+            inSlope: 1.7945546
+            outSlope: 1.7945546
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
@@ -5158,8 +5150,8 @@ MonoBehaviour:
           - serializedVersion: 3
             time: 1
             value: 1
-            inSlope: -0.5640811
-            outSlope: -0.5640811
+            inSlope: 0
+            outSlope: 0
             tangentMode: 0
             weightedMode: 0
             inWeight: 0.33333334
@@ -5168,7 +5160,7 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 0.4
+        Duration: 0.3
       Fade:
         AnimationType: 2
         Enabled: 1
@@ -5186,8 +5178,8 @@ MonoBehaviour:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-        StartDelay: 0
-        Duration: 0.4
+        StartDelay: 0.2
+        Duration: 0.2
     AutoStartLoopAnimation: 1
     LoadSelectedPresetAtRuntime: 0
     InstantAnimation: 0
@@ -5235,8 +5227,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Fade
-    PresetName: GrowOut
+    PresetCategory: Organic
+    PresetName: RoadRunnerBottom
   HideProgressor: {fileID: 0}
   LoopBehavior:
     Animation:
@@ -6711,31 +6703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117245, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
@@ -12401,6 +12368,7 @@ GameObject:
   - component: {fileID: 462627361}
   - component: {fileID: 462627360}
   - component: {fileID: 462627359}
+  - component: {fileID: 462627363}
   m_Layer: 0
   m_Name: Button - LevelSelect
   m_TagString: Untagged
@@ -12465,7 +12433,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -12489,8 +12457,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Scale
+    PresetName: ClickOutSlow
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -12498,9 +12466,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 4
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -12515,16 +12483,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -12537,16 +12505,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0.2, y: 0.2, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 6
+        Elasticity: 0.3
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -12558,12 +12526,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -13325,8 +13293,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: GummyNormal
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -13334,9 +13302,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -10, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 12
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -13351,16 +13319,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -13373,16 +13341,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.15, y: 0.15, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -13394,12 +13362,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -14824,6 +14792,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462627357}
   m_CullTransparentMesh: 0
+--- !u!225 &462627363
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462627357}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &470645410
 GameObject:
   m_ObjectHideFlags: 0
@@ -18474,12 +18454,6 @@ PrefabInstance:
       propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: gameLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: c4f90568a0e7f7c47b48d0fbc60097d9,
-        type: 2}
     - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -18500,6 +18474,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: gameLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: c4f90568a0e7f7c47b48d0fbc60097d9,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
 --- !u!1 &568339570
@@ -21179,8 +21159,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: GummyNormal
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -21188,9 +21168,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -10, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 12
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -21205,16 +21185,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -21227,16 +21207,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.15, y: 0.15, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -21248,12 +21228,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -25880,6 +25860,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820231108}
   m_CullTransparentMesh: 0
+--- !u!1 &821426039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821426042}
+  - component: {fileID: 821426041}
+  - component: {fileID: 821426040}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &821426040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821426039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &821426041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821426039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &821426042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821426039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822405824
 GameObject:
   m_ObjectHideFlags: 0
@@ -26585,7 +26631,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -26609,8 +26655,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Scale
+    PresetName: ClickOutSlow
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -26618,9 +26664,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 4
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -26635,16 +26681,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -26657,16 +26703,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0.2, y: 0.2, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 6
+        Elasticity: 0.3
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -26678,12 +26724,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -30212,7 +30258,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -30236,8 +30282,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Scale
+    PresetName: ClickOutSlow
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -30245,9 +30291,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 4
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -30262,16 +30308,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -30284,16 +30330,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0.2, y: 0.2, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 6
+        Elasticity: 0.3
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -30305,12 +30351,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -31072,8 +31118,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: GummyNormal
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -31081,9 +31127,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -10, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 12
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -31098,16 +31144,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -31120,16 +31166,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.15, y: 0.15, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -31141,12 +31187,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -35713,11 +35759,6 @@ PrefabInstance:
       propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: gameLevel
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -35737,6 +35778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: gameLevel
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
@@ -36558,7 +36604,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -36582,8 +36628,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Scale
+    PresetName: ClickOutSlow
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -36591,9 +36637,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 4
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -36608,16 +36654,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -36630,16 +36676,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0.2, y: 0.2, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 6
+        Elasticity: 0.3
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -36651,12 +36697,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -37418,8 +37464,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: GummyNormal
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -37427,9 +37473,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -10, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 12
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -37444,16 +37490,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -37466,16 +37512,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.15, y: 0.15, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -37487,12 +37533,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -40464,12 +40510,6 @@ PrefabInstance:
       propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: gameLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: c4fe2a61910806049a03b45a2d788bdb,
-        type: 2}
     - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -40490,6 +40530,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: gameLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: c4fe2a61910806049a03b45a2d788bdb,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
 --- !u!1 &1323247069
@@ -42365,12 +42411,6 @@ PrefabInstance:
       propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: gameLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: 5c31f0384ebb08c42a29d20619a1132e,
-        type: 2}
     - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -42391,6 +42431,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: gameLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: 5c31f0384ebb08c42a29d20619a1132e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
 --- !u!1 &1440994775
@@ -42863,7 +42909,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -42887,8 +42933,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Scale
+    PresetName: ClickOutSlow
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -42896,9 +42942,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 4
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -42913,16 +42959,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -42935,16 +42981,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0.2, y: 0.2, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 6
+        Elasticity: 0.3
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -42956,12 +43002,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -43723,8 +43769,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: GummyNormal
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -43732,9 +43778,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -10, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 12
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -43749,16 +43795,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -43771,16 +43817,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.15, y: 0.15, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -43792,12 +43838,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -59508,31 +59554,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117245, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
 --- !u!1 &1614622501
@@ -65026,8 +65047,9 @@ GameObject:
   - component: {fileID: 1872772856}
   - component: {fileID: 1872772855}
   - component: {fileID: 1872772854}
+  - component: {fileID: 1872772858}
   m_Layer: 0
-  m_Name: UIButton
+  m_Name: Button - LoadLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65090,7 +65112,7 @@ MonoBehaviour:
     ButtonAnimationType: 0
     DeselectButton: 0
     DisableInterval: 0.4
-    Enabled: 0
+    Enabled: 1
     LoadSelectedPresetAtRuntime: 0
     OnTrigger:
       AnimatorEvents: []
@@ -65114,8 +65136,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Scale
+    PresetName: ClickOutSlow
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -65123,9 +65145,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -5, y: 5, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 4
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -65140,16 +65162,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.2
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -30, z: -15}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -65162,16 +65184,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0.05, y: 0.05, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 6
+        Elasticity: 0.3
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -65183,12 +65205,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.5
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -65961,8 +65983,8 @@ MonoBehaviour:
         SoundName: No Sound
         AudioClip: {fileID: 0}
         OutputAudioMixerGroup: {fileID: 0}
-    PresetCategory: Uncategorized
-    PresetName: Default
+    PresetCategory: Organic
+    PresetName: GummyNormal
     PunchAnimation:
       AnimationType: 4
       Move:
@@ -65970,9 +65992,9 @@ MonoBehaviour:
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: -10, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
+        Vibrato: 12
         Elasticity: 1
         NumberOfLoops: -1
         LoopType: 1
@@ -65987,16 +66009,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Rotate:
         AnimationType: 4
         Enabled: 0
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: 0, y: 0, z: -5}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         RotateMode: 1
@@ -66009,16 +66031,16 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Scale:
         AnimationType: 4
-        Enabled: 0
+        Enabled: 1
         From: {x: 0, y: 0, z: 0}
         To: {x: 0, y: 0, z: 0}
-        By: {x: 0, y: 0, z: 0}
+        By: {x: -0.15, y: 0.15, z: 0}
         UseCustomFromAndTo: 0
-        Vibrato: 10
-        Elasticity: 1
+        Vibrato: 4
+        Elasticity: 0.5
         NumberOfLoops: -1
         LoopType: 1
         EaseType: 0
@@ -66030,12 +66052,12 @@ MonoBehaviour:
           m_PostInfinity: 2
           m_RotationOrder: 4
         StartDelay: 0
-        Duration: 1
+        Duration: 0.3
       Fade:
         AnimationType: 4
         Enabled: 0
         From: 0
-        To: 0
+        To: 1
         By: 0.5
         UseCustomFromAndTo: 0
         NumberOfLoops: -1
@@ -67460,6 +67482,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872772852}
   m_CullTransparentMesh: 0
+--- !u!225 &1872772858
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872772852}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1884995829
 GameObject:
   m_ObjectHideFlags: 0
@@ -72303,12 +72337,6 @@ PrefabInstance:
       propertyPath: OnPointerEnter.OnTrigger.Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
-        type: 3}
-      propertyPath: gameLevel
-      value: 
-      objectReference: {fileID: 11400000, guid: e2e5ab620e1b0094db1f4e2313436955,
-        type: 2}
     - target: {fileID: 5478394649384037491, guid: fdac09d923f7b7d4bbd307b18345f2da,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -72329,6 +72357,12 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117242, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: gameLevel
+      value: 
+      objectReference: {fileID: 11400000, guid: e2e5ab620e1b0094db1f4e2313436955,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
 --- !u!1001 &5478394648338397196

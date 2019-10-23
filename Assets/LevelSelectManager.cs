@@ -10,12 +10,14 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
     [SerializeField] TMP_Text levelNameText = null;
     [SerializeField] Image levelPreviewImage = null;
     [SerializeField] TMP_Text personalBestText = null;
+    [SerializeField] GameObject playButton = null;
 
     [SerializeField] SceneReferencePlus currentlySelectedLevel = null;
 
     void Start()
     {
         levelPreviewHolder.SetActive(false);
+            playButton.SetActive(false);
     }
 
     public void UpdateLevelDisplay(GameLevel newLevel)
@@ -34,6 +36,7 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
 
     public void SelectNewLevel(SceneReferencePlus newLevel)
     {
+        playButton.SetActive(newLevel != null);
         currentlySelectedLevel = newLevel;
     }
 
