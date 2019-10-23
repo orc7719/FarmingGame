@@ -18,7 +18,9 @@ MonoBehaviour:
   - Example
   - General
   - GameUI
+  - LevelUI
   Categories:
   - {fileID: 11400000, guid: 40f9e81ff80114a47a3721228ba749ed, type: 2}
   - {fileID: 11400000, guid: e0dc3c31c8374964a8c748021726f8f0, type: 2}
   - {fileID: 11400000, guid: 342b8f0d92792ae42b032e820e04490b, type: 2}
+  - {fileID: 11400000, guid: 40ed1ca3cdf91e04e8482901f8e43ce4, type: 2}

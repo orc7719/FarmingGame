@@ -10,19 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42f06ff6cc543ea942180e019f0fc8d, type: 3}
-  m_Name: UIView_LevelUI
+  m_Name: UIButton_LevelUI
   m_EditorClassIdentifier: 
   CategoryName: LevelUI
-  DatabaseType: 2
+  DatabaseType: 0
   Names:
-  - Timer
-  - HelpButton
-  - PauseButton
-  - HelpMenu
-  - PauseMenu
-  - OrderPanel
-  - TutorialPanel
-  - GUIView
-  - WinPanel
-  - LosePanel
-  - BackgroundBlur
+  - Help
+  - Pause
+  - Back
+  - ReturnToMenu

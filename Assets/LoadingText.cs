@@ -16,11 +16,11 @@ public class LoadingText : MonoBehaviour
     {
         while (true)
         {
-            for (int i = 13; i < 17; i++)
+            for (int i = 6; i < 10; i++)
             {
                
                 loadingText.maxVisibleCharacters = i;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.4f);
             }
         }
     }
