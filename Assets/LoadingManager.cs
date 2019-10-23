@@ -24,38 +24,6 @@ public class LoadingManager : Singleton<LoadingManager>
 
         if (sceneList.Count > 0)
             StartCoroutine(LoadScenesAsync(sceneList));
-        //SceneManager.LoadScene(uiScene);
-        //SceneManager.LoadScene(newLevel, LoadSceneMode.Additive);
-    }
-
-    IEnumerator AsyncLoadLevel(SceneReferencePlus newLevel)
-    {
-        AsyncOperation uiSceneOperation = SceneManager.LoadSceneAsync(uiScene);
-        uiSceneOperation.allowSceneActivation = false;
-
-        AsyncOperation newLevelOperation = SceneManager.LoadSceneAsync(newLevel, LoadSceneMode.Additive);
-        newLevelOperation.allowSceneActivation = false;
-
-        while (uiSceneOperation.progress < 0.9f && newLevelOperation.progress < 0.9f)
-        {
-            Debug.Log("UI Progress: " + uiSceneOperation.progress);
-            Debug.Log("Level Progress: " + newLevelOperation.progress);
-            yield return null;
-        }
-
-        uiSceneOperation.allowSceneActivation = true;
-        newLevelOperation.allowSceneActivation = true;
-
-        while (!uiSceneOperation.isDone && !newLevelOperation.isDone )
-        {
-            yield return null;
-        }
-
-        yield return new WaitForEndOfFrame();
-
-        SceneManager.UnloadSceneAsync(menuScene);
-
-
     }
 
     private IEnumerator LoadScenesAsync(List<SceneReferencePlus> scenesToLoad)
