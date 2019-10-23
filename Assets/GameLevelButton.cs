@@ -21,7 +21,7 @@ public class GameLevelButton : MonoBehaviour
 
     public void OnHover()
     {
-        Debug.Log("Hovered: " + name);
         LevelSelectManager.Instance.UpdateLevelDisplay(gameLevel);
+        LevelSelectManager.Instance.SelectNewLevel(gameLevel.levelScene);
     }
 }
