@@ -1328,17 +1328,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1201350856425695763, guid: 17d2566928d27f148a69509feb6a17a9,
+        type: 3}
+      propertyPath: m_Name
+      value: Level Controller
+      objectReference: {fileID: 0}
     - target: {fileID: 2281939127442234812, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: _previouslyRegisteredEvent
       value: 
       objectReference: {fileID: 11400000, guid: bf752b65bcfc45741ad735aec48f53c8,
         type: 2}
-    - target: {fileID: 1201350856425695763, guid: 17d2566928d27f148a69509feb6a17a9,
-        type: 3}
-      propertyPath: m_Name
-      value: Level Controller
-      objectReference: {fileID: 0}
     - target: {fileID: 1201350856425695757, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5692,7 +5692,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.184314
+  orthographic size: 0.99926496
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
