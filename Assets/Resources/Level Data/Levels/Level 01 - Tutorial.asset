@@ -18,4 +18,5 @@ MonoBehaviour:
   levelScene:
     sceneAsset: {fileID: 102900000, guid: 26bc325ba28717b4899bc806358b0060, type: 3}
     scenePath: Assets/Scenes/Levels/_Tutorial.unity
-  personalBest: 0
+  personalBest: 999
+  levelCompelted: 0

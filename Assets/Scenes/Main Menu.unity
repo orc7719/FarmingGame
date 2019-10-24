@@ -3241,7 +3241,7 @@ MonoBehaviour:
   levelPreviewHolder: {fileID: 1991627521}
   levelNameText: {fileID: 1486802411}
   levelPreviewImage: {fileID: 1295660963}
-  personalBestText: {fileID: 0}
+  personalBestText: {fileID: 1084233285}
   playButton: {fileID: 1872772852}
   currentlySelectedLevel:
     sceneAsset: {fileID: 0}
@@ -14837,10 +14837,10 @@ RectTransform:
   m_Father: {fileID: 343026529}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: -20}
+  m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470645412
 MonoBehaviour:
@@ -30092,7 +30092,7 @@ MonoBehaviour:
   AngleMultiplier: 1
   SpeedMultiplier: 1
   CurveScale: 50
-  hasUpdated: 1
+  hasUpdated: 0
 --- !u!222 &900461953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72493,5 +72493,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0c0783019577204468fece320b3c034d,
         type: 2}
+    - target: {fileID: 5478394648949117247, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.12815951
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117247, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6037736
+      objectReference: {fileID: 0}
+    - target: {fileID: 5478394648949117247, guid: fdac09d923f7b7d4bbd307b18345f2da,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.13788065
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdac09d923f7b7d4bbd307b18345f2da, type: 3}
