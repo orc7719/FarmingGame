@@ -11,5 +11,7 @@ public class GameLevel : ScriptableObject
     public string levelName = "";
     public Sprite levelPreview = null;
     public SceneReferencePlus levelScene = null;
+
     public int personalBest = 0;
+    public bool levelCompelted = false;
 }

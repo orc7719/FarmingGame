@@ -18,3 +18,4 @@ MonoBehaviour:
   - MasterCanvas
   - UICanvas
   - LoadingCanvas
+  - PopupCanvas

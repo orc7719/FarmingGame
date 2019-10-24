@@ -20,9 +20,11 @@ MonoBehaviour:
   - GameUI
   - LoadingUI
   - LevelUI
+  - PopupUI
   Categories:
   - {fileID: 11400000, guid: b01e98f4801f7124ba39e1dac4debf90, type: 2}
   - {fileID: 11400000, guid: 08c17022e99c2e546a90620748991bbe, type: 2}
   - {fileID: 11400000, guid: 3af180930cd7f874ba29f9f6655ed106, type: 2}
   - {fileID: 11400000, guid: 9d2ab9424bf32304b9f3c8d7c74f2b32, type: 2}
   - {fileID: 11400000, guid: d8d0b3db4b09bfe4eb19ebd9c525b9fc, type: 2}
+  - {fileID: 11400000, guid: a4624243dcb82e444a558f71687680aa, type: 2}

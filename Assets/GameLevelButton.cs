@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Doozy.Engine.UI;
+using UnityEngine.UI;
 
 public class GameLevelButton : MonoBehaviour
 {
@@ -16,7 +17,15 @@ public class GameLevelButton : MonoBehaviour
             GetComponentInChildren<TMP_Text>().text = "";
         }
         else
+        {
             GetComponentInChildren<TMP_Text>().text = gameLevel.levelId.ToString("00");
+
+        }
+    }
+
+    void OnEnable()
+    {
+        GetComponent<Image>().color = (gameLevel.levelCompelted == true) ? new Color(0.125f, 0.6f, 0.135f, 1f) : Color.white;
     }
 
     public void OnHover()

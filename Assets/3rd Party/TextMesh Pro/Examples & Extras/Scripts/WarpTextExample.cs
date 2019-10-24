@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace TMPro.Examples
 {
-
+    [ExecuteInEditMode]
     public class WarpTextExample : MonoBehaviour
     {
 
@@ -29,6 +29,11 @@ namespace TMPro.Examples
         void OnDisable()
         {
             StopCoroutine(WarpText());
+        }
+
+        void UpdateWarp()
+        {
+
         }
 
         private AnimationCurve CopyAnimationCurve(AnimationCurve curve)

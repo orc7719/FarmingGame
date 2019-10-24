@@ -451,6 +451,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130140113}
   m_CullTransparentMesh: 0
+--- !u!1001 &408665876
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7371443748575146298, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_Name
+      value: Managers
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402429267338936267, guid: 9c5e4fc6404b17241afae2aa4e05884f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747615303, guid: 9c5e4fc6404b17241afae2aa4e05884f, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747615303, guid: 9c5e4fc6404b17241afae2aa4e05884f, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747615303, guid: 9c5e4fc6404b17241afae2aa4e05884f, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 747615303, guid: 9c5e4fc6404b17241afae2aa4e05884f, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c5e4fc6404b17241afae2aa4e05884f, type: 3}
 --- !u!1 &449566485
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,14 +791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d30808ac1ba12542b8269b941e5307c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 875a3cc1b6d9e8846afc4c23460157d5, type: 2}
-  resources: {fileID: 11400000, guid: fd14ecf11855edb41801bb902aef6e3a, type: 2}
-  menuScene:
-    sceneAsset: {fileID: 102900000, guid: 440a4b00bd48a444689b12e824008a62, type: 3}
-    scenePath: Assets/Scenes/Main Menu.unity
-  uiScene:
-    sceneAsset: {fileID: 102900000, guid: 7d3f6bffaab27d645bc86b9265dffc78, type: 3}
-    scenePath: Assets/Scenes/UI Scene.unity
 --- !u!4 &1429294486
 Transform:
   m_ObjectHideFlags: 0

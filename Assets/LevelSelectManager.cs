@@ -27,6 +27,7 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
             levelPreviewHolder.SetActive(true);
             levelNameText.text = newLevel.levelId.ToString("00") + " - " + newLevel.levelName;
             levelPreviewImage.sprite = newLevel.levelPreview;
+            personalBestText.text = "Personal Best: " + newLevel.personalBest.ToString("000");
         }
         else
         {
