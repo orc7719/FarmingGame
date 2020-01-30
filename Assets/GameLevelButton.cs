@@ -25,7 +25,8 @@ public class GameLevelButton : MonoBehaviour
 
     void OnEnable()
     {
-        GetComponent<Image>().color = (gameLevel.levelCompelted == true) ? new Color(0.125f, 0.6f, 0.135f, 1f) : Color.white;
+        if (gameLevel)
+            GetComponent<Image>().color = (gameLevel.levelCompelted == true) ? new Color(0.125f, 0.6f, 0.135f, 1f) : Color.white;
     }
 
     public void OnHover()

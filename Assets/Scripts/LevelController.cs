@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using ScriptableObjectArchitecture;
+using Doozy.Engine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : Singleton<LevelController>
 {
@@ -44,9 +46,13 @@ public class LevelController : Singleton<LevelController>
 
         while (gametimer >= 0)
         {
+            if (!levelPaused)
+            {
+                gametimer--;
+                UIController.Instance.UpdateTimer(gametimer);
+                
+            }
             yield return new WaitForSeconds(1f);
-            gametimer--;
-            UIController.Instance.UpdateTimer(gametimer);
         }
 
         if (levelPlaying)
@@ -57,15 +63,19 @@ public class LevelController : Singleton<LevelController>
     {
         levelPlaying = false;
         Time.timeScale = 0;
-        UIController.Instance.ShowWinPanel();
+        GameEventMessage.SendEvent("LevelComplete");
+        //UIController.Instance.ShowWinPanel();
     }
 
     void FailLevel()
     {
         levelPlaying = false;
         Time.timeScale = 0;
-        UIController.Instance.ShowLosePanel();
+        GameEventMessage.SendEvent("LevelFailed");
+        //UIController.Instance.ShowLosePanel();
     }
+
+
 
     public bool TryTurnInItem(Item cropItem)
     {

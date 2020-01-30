@@ -7,7 +7,6 @@ using ScriptableObjectArchitecture;
 public class UIController : Singleton<UIController>
 {
     [SerializeField] TMP_Text wheatCountText = null, carrotCountText = null, potatoCountText = null, beetCountText = null;
-    public GameObject pausemenu = null, PauseButton = null;
     public TMP_Text timerText = null;
 
     [SerializeField] GameObject winPanel = null, losePanel = null, helpMenu = null;
@@ -19,7 +18,7 @@ public class UIController : Singleton<UIController>
     public void Pause()
     {
         
-        pausemenu.SetActive(true);
+        //pausemenu.SetActive(true);
         //PauseButton.SetActive(false);
 
         LevelController.Instance.levelPaused = true;
@@ -28,7 +27,7 @@ public class UIController : Singleton<UIController>
 
     public void Resume()
     {
-        pausemenu.SetActive(false);
+        //pausemenu.SetActive(false);
         //PauseButton.SetActive(true);
 
         LevelController.Instance.levelPaused = false;
@@ -37,6 +36,7 @@ public class UIController : Singleton<UIController>
 
     public void ReturnToMenu()
     {
+        Time.timeScale = 1;
         LoadingManager.Instance.ReturnToMenu();
     }
 
@@ -97,12 +97,14 @@ public class UIController : Singleton<UIController>
 
     public void CompleteOrder()
     {
-        orderAnim.SetTrigger("OrderCompleted");
+        if (orderAnim != null)
+            orderAnim.SetTrigger("OrderCompleted");
     }
 
     public void GetNewOrder()
     {
-        orderAnim.SetTrigger("ResetOrder");
+        if (orderAnim != null)
+            orderAnim.SetTrigger("ResetOrder");
     }
 
     public void OpenHelp()
@@ -122,5 +124,11 @@ public class UIController : Singleton<UIController>
 
         LevelController.Instance.levelPaused = false;
         Time.timeScale = 1;
+    }
+
+    public void RetryLevel()
+    {
+        Time.timeScale = 1;
+        LoadingManager.Instance.ReloadLevel();
     }
 }

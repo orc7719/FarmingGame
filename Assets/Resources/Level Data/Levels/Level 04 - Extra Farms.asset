@@ -16,6 +16,7 @@ MonoBehaviour:
   levelName: Extra Farms
   levelPreview: {fileID: 21300000, guid: 45a948505164dda409051ea749ad48fa, type: 3}
   levelScene:
-    sceneAsset: {fileID: 102900000, guid: ebceb96630f4b644c9430490a470c979, type: 3}
+    sceneAsset: {fileID: 102900000, guid: 8b1a71e3df8fa3f4db03712b9b51f24b, type: 3}
     scenePath: Assets/Scenes/Levels/Level 04.unity
   personalBest: 0
+  levelCompelted: 0

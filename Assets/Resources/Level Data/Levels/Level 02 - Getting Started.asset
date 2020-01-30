@@ -16,6 +16,7 @@ MonoBehaviour:
   levelName: Getting Started
   levelPreview: {fileID: 21300000, guid: 7fdc25aebac70aa499217451c47c2a99, type: 3}
   levelScene:
-    sceneAsset: {fileID: 102900000, guid: ad93554afbfc6514484e8765990ad64a, type: 3}
+    sceneAsset: {fileID: 102900000, guid: ebceb96630f4b644c9430490a470c979, type: 3}
     scenePath: Assets/Scenes/Levels/Level 02.unity
   personalBest: 0
+  levelCompelted: 0

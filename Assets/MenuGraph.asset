@@ -38,6 +38,20 @@ MonoBehaviour:
       m_inputSocketId: ec669400-ddba-4a84-9f16-81f6d3b1eade
       m_outputNodeId: 19d7da3b-0786-447b-8827-a9530e68860d
       m_outputSocketId: 9ef4308c-20c8-4d41-aae6-0944486eb16d
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: aadc0853-1bb1-4841-b4b9-30aaa190734a
+      m_inputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_inputSocketId: ec669400-ddba-4a84-9f16-81f6d3b1eade
+      m_outputNodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+      m_outputSocketId: 2f8712e6-5803-4137-8940-2cd22c744463
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 018704ea-21c5-46ca-b141-921bf22cf134
+      m_inputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_inputSocketId: ec669400-ddba-4a84-9f16-81f6d3b1eade
+      m_outputNodeId: 2212dbdf-b92b-4172-8173-8516f9106ca2
+      m_outputSocketId: 10d72908-f2e6-48b8-b358-e824bd0dec2c
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -57,7 +71,14 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_outputSockets:
   - m_connectionMode: 0
-    m_connections: []
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: cd385da8-4b50-40a0-a339-2e5f56998749
+      m_inputNodeId: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+      m_inputSocketId: 465707b0-6b64-4e0d-80d8-cb4beac5d5f6
+      m_outputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_outputSocketId: 9085e287-c57d-4c2f-9fcc-4df3b68b03e8
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -72,7 +93,7 @@ MonoBehaviour:
     m_id: 9085e287-c57d-4c2f-9fcc-4df3b68b03e8
     m_nodeId: ec34dfdf-1164-4514-9238-e80349dd848f
     m_socketName: OutputSocket_0
-    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"","TimeDelay":3.0,"Trigger":3}'
+    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"LevelComplete","TimeDelay":3.0,"Trigger":3}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   - m_connectionMode: 0
@@ -127,6 +148,32 @@ MonoBehaviour:
     m_value: '{"ButtonCategory":"LevelUI","ButtonName":"Pause","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: e0842c6a-3aed-4ac8-b9c7-3aac1b3a76dc
+      m_inputNodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+      m_inputSocketId: 5b8a3f04-5a35-495d-ad59-5b3b7c8abfc2
+      m_outputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_outputSocketId: 6a7bd31e-565d-43fb-8ee7-48c0b117a161
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 134
+    m_id: 6a7bd31e-565d-43fb-8ee7-48c0b117a161
+    m_nodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+    m_socketName: OutputSocket_3
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"LevelFailed","TimeDelay":3.0,"Trigger":3}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_nodeType: 4
   m_allowDuplicateNodeName: 0
   m_allowEmptyNodeName: 0
@@ -135,7 +182,7 @@ MonoBehaviour:
   m_useFixedUpdate: 0
   m_useLateUpdate: 0
   m_useUpdate: 0
-  m_height: 176
+  m_height: 200
   m_width: 216
   m_x: 1440
   m_y: -84
@@ -219,7 +266,7 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: -2, y: 4}
       m_outputConnectionPoint: {x: 202, y: 4}
-      m_id: 3d588911-0c40-48fd-8fcd-3b425cc11b5f
+      m_id: 018704ea-21c5-46ca-b141-921bf22cf134
       m_inputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
       m_inputSocketId: ec669400-ddba-4a84-9f16-81f6d3b1eade
       m_outputNodeId: 2212dbdf-b92b-4172-8173-8516f9106ca2
@@ -577,6 +624,343 @@ MonoBehaviour:
   - Category: LoadingUI
     InstantAction: 0
     Name: ProgressBar
+--- !u!114 &-5288634821385945964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a439e06374673a9115ed02deb5a54, type: 3}
+  m_Name: UINode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 21f64fea-08aa-47bc-968e-055357b4527f
+      m_inputNodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+      m_inputSocketId: 17fbb194-275a-44b6-9e88-7cbca0af6441
+      m_outputNodeId: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+      m_outputSocketId: 2de15c40-5fc9-47fb-a0d4-cff67ce0d3be
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 87335d75-f594-47d7-a2d6-bf63f765f15c
+      m_inputNodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+      m_inputSocketId: 17fbb194-275a-44b6-9e88-7cbca0af6441
+      m_outputNodeId: 2212dbdf-b92b-4172-8173-8516f9106ca2
+      m_outputSocketId: 10d72908-f2e6-48b8-b358-e824bd0dec2c
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 17fbb194-275a-44b6-9e88-7cbca0af6441
+    m_nodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+    m_socketName: InputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: aadc0853-1bb1-4841-b4b9-30aaa190734a
+      m_inputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_inputSocketId: ec669400-ddba-4a84-9f16-81f6d3b1eade
+      m_outputNodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+      m_outputSocketId: 2f8712e6-5803-4137-8940-2cd22c744463
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 2f8712e6-5803-4137-8940-2cd22c744463
+    m_nodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+    m_socketName: OutputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"LevelLoaded","TimeDelay":3.0,"Trigger":3}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 128
+  m_width: 216
+  m_x: 1224
+  m_y: 336
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: c5b5f452-3619-43cb-9076-88a81db0bfdb
+  m_id: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+  m_name: Loading Scene To Retry
+  m_notes: 
+  m_onEnterShowViews:
+  - Category: LoadingUI
+    InstantAction: 0
+    Name: LoadingBackground
+  - Category: LoadingUI
+    InstantAction: 0
+    Name: ProgressBar
+  m_onEnterHideViews: []
+  m_onExitShowViews: []
+  m_onExitHideViews:
+  - Category: LoadingUI
+    InstantAction: 0
+    Name: LoadingBackground
+  - Category: LoadingUI
+    InstantAction: 0
+    Name: ProgressBar
+--- !u!114 &-5194895159480720293
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a651565835d4deb9517969e9738bc56, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 0a239eb9-5089-4121-9958-ffb1c9e968d4
+      m_inputNodeId: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+      m_inputSocketId: 4eb6304c-3fad-492d-8fa4-b37b3f22bd7f
+      m_outputNodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+      m_outputSocketId: 791d2e3a-9cff-4e0c-9fe4-8eb617ac7a38
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 4eb6304c-3fad-492d-8fa4-b37b3f22bd7f
+    m_nodeId: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+    m_socketName: InputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 21f64fea-08aa-47bc-968e-055357b4527f
+      m_inputNodeId: 7f705c61-424e-4e68-be23-1db88bbf0cc5
+      m_inputSocketId: 17fbb194-275a-44b6-9e88-7cbca0af6441
+      m_outputNodeId: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+      m_outputSocketId: 2de15c40-5fc9-47fb-a0d4-cff67ce0d3be
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 2de15c40-5fc9-47fb-a0d4-cff67ce0d3be
+    m_nodeId: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 1
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 152
+  m_width: 216
+  m_x: 1476
+  m_y: 336
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: c5b5f452-3619-43cb-9076-88a81db0bfdb
+  m_id: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+  m_name: Wait
+  m_notes: 
+  ErrorNoGameEvent: 0
+  ErrorNoSceneName: 0
+  ErrorBadBuildIndex: 0
+  GetSceneBy: 0
+  WaitFor: 0
+  AnyValue: 0
+  IgnoreUnityTimescale: 1
+  RandomDuration: 0
+  Duration: 0.3
+  DurationMax: 1
+  DurationMin: 0
+  SceneBuildIndex: 0
+  GameEvent: 
+  SceneName: 
+--- !u!114 &-4665827347727876570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a439e06374673a9115ed02deb5a54, type: 3}
+  m_Name: UINode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: e0842c6a-3aed-4ac8-b9c7-3aac1b3a76dc
+      m_inputNodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+      m_inputSocketId: 5b8a3f04-5a35-495d-ad59-5b3b7c8abfc2
+      m_outputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_outputSocketId: 6a7bd31e-565d-43fb-8ee7-48c0b117a161
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 5b8a3f04-5a35-495d-ad59-5b3b7c8abfc2
+    m_nodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+    m_socketName: InputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: e7b7a83f-30ae-45c0-848c-3ffbfe90856a
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+      m_outputSocketId: 5a267107-daa4-4f2e-9e01-84755d176d87
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 5a267107-daa4-4f2e-9e01-84755d176d87
+    m_nodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+    m_socketName: OutputSocket_0
+    m_value: '{"ButtonCategory":"LevelUI","ButtonName":"ReturnToMenu","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 0a239eb9-5089-4121-9958-ffb1c9e968d4
+      m_inputNodeId: 9e37f3d9-d2e2-42ee-8ec7-f32571d605f6
+      m_inputSocketId: 4eb6304c-3fad-492d-8fa4-b37b3f22bd7f
+      m_outputNodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+      m_outputSocketId: 791d2e3a-9cff-4e0c-9fe4-8eb617ac7a38
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 86
+    m_id: 791d2e3a-9cff-4e0c-9fe4-8eb617ac7a38
+    m_nodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+    m_socketName: OutputSocket_1
+    m_value: '{"ButtonCategory":"LevelUI","ButtonName":"Retry","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 152
+  m_width: 216
+  m_x: 1704
+  m_y: 288
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: c5b5f452-3619-43cb-9076-88a81db0bfdb
+  m_id: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+  m_name: Lose Panel
+  m_notes: 
+  m_onEnterShowViews:
+  - Category: LevelUI
+    InstantAction: 0
+    Name: BackgroundBlur
+  - Category: LevelUI
+    InstantAction: 0
+    Name: LosePanel
+  m_onEnterHideViews: []
+  m_onExitShowViews: []
+  m_onExitHideViews:
+  - Category: LevelUI
+    InstantAction: 0
+    Name: BackgroundBlur
+  - Category: LevelUI
+    InstantAction: 0
+    Name: LosePanel
 --- !u!114 &-4257506874580444205
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -922,6 +1306,108 @@ MonoBehaviour:
   - Category: GameUI
     InstantAction: 0
     Name: BackButton
+--- !u!114 &-2087160124069064146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840a439e06374673a9115ed02deb5a54, type: 3}
+  m_Name: UINode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: cd385da8-4b50-40a0-a339-2e5f56998749
+      m_inputNodeId: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+      m_inputSocketId: 465707b0-6b64-4e0d-80d8-cb4beac5d5f6
+      m_outputNodeId: ec34dfdf-1164-4514-9238-e80349dd848f
+      m_outputSocketId: 9085e287-c57d-4c2f-9fcc-4df3b68b03e8
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 465707b0-6b64-4e0d-80d8-cb4beac5d5f6
+    m_nodeId: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+    m_socketName: InputSocket_0
+    m_value: '{"ButtonCategory":"General","ButtonName":"Unnamed","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 44d756c2-bcb5-4dae-b17c-fa4fd9e5933d
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+      m_outputSocketId: 82a37864-e44d-4686-9f38-7374aec687e6
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 1
+    m_canBeReordered: 1
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 82a37864-e44d-4686-9f38-7374aec687e6
+    m_nodeId: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+    m_socketName: OutputSocket_0
+    m_value: '{"ButtonCategory":"LevelUI","ButtonName":"ReturnToMenu","GameEvent":"","TimeDelay":3.0,"Trigger":0}'
+    m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 0
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 128
+  m_width: 216
+  m_x: 1704
+  m_y: 156
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: c5b5f452-3619-43cb-9076-88a81db0bfdb
+  m_id: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+  m_name: Win Panel
+  m_notes: 
+  m_onEnterShowViews:
+  - Category: LevelUI
+    InstantAction: 0
+    Name: BackgroundBlur
+  - Category: LevelUI
+    InstantAction: 0
+    Name: WinPanel
+  m_onEnterHideViews: []
+  m_onExitShowViews: []
+  m_onExitHideViews:
+  - Category: LevelUI
+    InstantAction: 0
+    Name: BackgroundBlur
+  - Category: LevelUI
+    InstantAction: 0
+    Name: WinPanel
 --- !u!114 &-1823653388307855931
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1041,9 +1527,37 @@ MonoBehaviour:
   m_inputSockets:
   - m_connectionMode: 1
     m_connections:
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: e703a3e3-f2d6-4f14-9782-16eeef32bf18
+      m_inputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_inputSocketId: 8f353ba3-889e-4817-be26-44b0e27c0a25
+      m_outputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_outputSocketId: 46e7192b-24b2-49f5-826e-bcf18a972162
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: e703a3e3-f2d6-4f14-9782-16eeef32bf18
+      m_id: 9db5578e-9e3c-49cf-a5c0-7e5c1079121b
+      m_inputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_inputSocketId: 8f353ba3-889e-4817-be26-44b0e27c0a25
+      m_outputNodeId: 43348580-30be-424c-a3e2-5297bba65818
+      m_outputSocketId: 72361ec9-624a-4869-9c75-3b7184926ef6
+    - m_inputConnectionPoint: {x: -2, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: 6fba487c-1c94-43e1-9fc3-f0826b9041ed
+      m_inputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_inputSocketId: 8f353ba3-889e-4817-be26-44b0e27c0a25
+      m_outputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_outputSocketId: 46e7192b-24b2-49f5-826e-bcf18a972162
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 083410a7-c03a-4e10-bc0d-00b635c179e4
+      m_inputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_inputSocketId: 8f353ba3-889e-4817-be26-44b0e27c0a25
+      m_outputNodeId: 43348580-30be-424c-a3e2-5297bba65818
+      m_outputSocketId: 72361ec9-624a-4869-9c75-3b7184926ef6
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 64c6a3c6-4282-4aec-a6da-25fcfb8f7d41
       m_inputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
       m_inputSocketId: 8f353ba3-889e-4817-be26-44b0e27c0a25
       m_outputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
@@ -1070,7 +1584,7 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: 7ae6caf4-86a0-4557-aa3f-5cfbc124ce71
+      m_id: 1d477195-d25a-4c5b-b040-3e4e5eee0e26
       m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
       m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
       m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
@@ -1089,7 +1603,7 @@ MonoBehaviour:
     m_id: f37500fa-9293-4f6b-b3e3-d92709c03319
     m_nodeId: a3ef190a-b513-4115-8046-93e5479bc592
     m_socketName: OutputSocket_0
-    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"MenuLoaded","TimeDelay":3.0,"Trigger":3}'
+    m_value: '{"ButtonCategory":"General","ButtonName":"Back","GameEvent":"LevelLoaded","TimeDelay":3.0,"Trigger":3}'
     m_valueTypeQualifiedName: Doozy.Engine.UI.Connections.UIConnection, Assembly-CSharp,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_nodeType: 4
@@ -1102,8 +1616,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 128
   m_width: 216
-  m_x: 948
-  m_y: 120
+  m_x: 960
+  m_y: 144
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: c5b5f452-3619-43cb-9076-88a81db0bfdb
@@ -1113,19 +1627,19 @@ MonoBehaviour:
   m_onEnterShowViews:
   - Category: LoadingUI
     InstantAction: 0
-    Name: ProgressBar
+    Name: LoadingBackground
   - Category: LoadingUI
     InstantAction: 0
-    Name: LoadingBackground
+    Name: ProgressBar
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
   - Category: LoadingUI
     InstantAction: 0
-    Name: ProgressBar
+    Name: LoadingBackground
   - Category: LoadingUI
     InstantAction: 0
-    Name: LoadingBackground
+    Name: ProgressBar
 --- !u!114 &-1235536765389322021
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1242,6 +1756,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugMode: 0
   m_nodes:
+  - {fileID: -5194895159480720293}
+  - {fileID: -5288634821385945964}
+  - {fileID: -4665827347727876570}
   - {fileID: 5615056044521058668}
   - {fileID: 6231027895901313048}
   - {fileID: 3846191089036158216}
@@ -1259,11 +1776,12 @@ MonoBehaviour:
   - {fileID: 8779222702377341822}
   - {fileID: -1823653388307855931}
   - {fileID: -1797754858468744307}
+  - {fileID: -2087160124069064146}
   m_isSubGraph: 0
   m_version: 1
   m_description: 
   m_id: c5b5f452-3619-43cb-9076-88a81db0bfdb
-  m_lastModified: 132163413543873270
+  m_lastModified: 132248863037253455
 --- !u!114 &61220628294538266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1392,6 +1910,106 @@ MonoBehaviour:
   - Category: GameUI
     InstantAction: 0
     Name: Level Select
+--- !u!114 &1724963505531636610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a651565835d4deb9517969e9738bc56, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  ErrorNodeNameIsEmpty: 0
+  ErrorDuplicateNameFoundInGraph: 0
+  m_inputSockets:
+  - m_connectionMode: 1
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 07518c09-42ef-42d2-81a5-27f5757c625d
+      m_inputNodeId: ca2f06a2-8831-4ffe-a5fe-420ddd4e3ebb
+      m_inputSocketId: 75de8283-34f8-4486-ae97-6c3ed7181d42
+      m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_outputSocketId: f37500fa-9293-4f6b-b3e3-d92709c03319
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 0
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 38
+    m_id: 75de8283-34f8-4486-ae97-6c3ed7181d42
+    m_nodeId: ca2f06a2-8831-4ffe-a5fe-420ddd4e3ebb
+    m_socketName: InputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_outputSockets:
+  - m_connectionMode: 0
+    m_connections:
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 7def7b68-a9d5-4027-b0a9-4530544667f9
+      m_inputNodeId: 8f81b837-d50d-43ac-8152-5a62c1bcfddc
+      m_inputSocketId: 30fb51c7-540a-4d6d-91c1-a928adee204e
+      m_outputNodeId: ca2f06a2-8831-4ffe-a5fe-420ddd4e3ebb
+      m_outputSocketId: 948fbd40-f7cb-46ab-8092-f8e11f943273
+    m_connectionPoints:
+    - {x: -2, y: 4}
+    - {x: 202, y: 4}
+    m_direction: 1
+    m_canBeDeleted: 0
+    m_canBeReordered: 0
+    m_curveModifier: 0
+    m_height: 24
+    m_width: 216
+    m_x: 0
+    m_y: 62
+    m_id: 948fbd40-f7cb-46ab-8092-f8e11f943273
+    m_nodeId: ca2f06a2-8831-4ffe-a5fe-420ddd4e3ebb
+    m_socketName: OutputSocket_0
+    m_value: '{}'
+    m_valueTypeQualifiedName: Doozy.Engine.Nody.Connections.PassthroughConnection,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_nodeType: 4
+  m_allowDuplicateNodeName: 1
+  m_allowEmptyNodeName: 0
+  m_canBeDeleted: 1
+  m_debugMode: 0
+  m_useFixedUpdate: 0
+  m_useLateUpdate: 0
+  m_useUpdate: 0
+  m_height: 152
+  m_width: 216
+  m_x: 732
+  m_y: 168
+  m_minimumInputSocketsCount: 1
+  m_minimumOutputSocketsCount: 1
+  m_graphId: c5b5f452-3619-43cb-9076-88a81db0bfdb
+  m_id: ca2f06a2-8831-4ffe-a5fe-420ddd4e3ebb
+  m_name: Wait
+  m_notes: 
+  ErrorNoGameEvent: 0
+  ErrorNoSceneName: 0
+  ErrorBadBuildIndex: 0
+  GetSceneBy: 0
+  WaitFor: 0
+  AnyValue: 0
+  IgnoreUnityTimescale: 1
+  RandomDuration: 0
+  Duration: 0.4
+  DurationMax: 1
+  DurationMin: 0
+  SceneBuildIndex: 0
+  GameEvent: 
+  SceneName: 
 --- !u!114 &3846191089036158216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1468,6 +2086,41 @@ MonoBehaviour:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
       m_id: 7ae6caf4-86a0-4557-aa3f-5cfbc124ce71
+      m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
+      m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
+      m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_outputSocketId: f37500fa-9293-4f6b-b3e3-d92709c03319
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: c3fd11b3-4cfd-445e-b6a7-c95573a3e566
+      m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
+      m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
+      m_outputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_outputSocketId: 46e7192b-24b2-49f5-826e-bcf18a972162
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 3cd3473c-2821-439d-8eec-faabf1336814
+      m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
+      m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
+      m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_outputSocketId: f37500fa-9293-4f6b-b3e3-d92709c03319
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: d057585f-3fdf-431a-9ff0-57e38a2b01ad
+      m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
+      m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
+      m_outputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_outputSocketId: 46e7192b-24b2-49f5-826e-bcf18a972162
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: f8f11ee8-0b17-4df2-ae6f-6392950b1829
+      m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
+      m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
+      m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_outputSocketId: f37500fa-9293-4f6b-b3e3-d92709c03319
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 1d477195-d25a-4c5b-b040-3e4e5eee0e26
       m_inputNodeId: 2ada3aa6-0598-44d6-824b-34aa08294d82
       m_inputSocketId: 21a14d8b-dfb6-487d-9096-4b736f9ba421
       m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
@@ -1806,6 +2459,48 @@ MonoBehaviour:
       m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
       m_outputNodeId: 43348580-30be-424c-a3e2-5297bba65818
       m_outputSocketId: 72361ec9-624a-4869-9c75-3b7184926ef6
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 34a9c3d3-5574-4c9d-9251-032d8c733e04
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_outputSocketId: f37500fa-9293-4f6b-b3e3-d92709c03319
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 47bf6a10-bad7-4c34-8bd8-ade9d325f7cd
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: 43348580-30be-424c-a3e2-5297bba65818
+      m_outputSocketId: 72361ec9-624a-4869-9c75-3b7184926ef6
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: 202, y: 4}
+      m_id: b8c6a411-0d7c-4010-99fb-7420873fc523
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
+      m_outputSocketId: f37500fa-9293-4f6b-b3e3-d92709c03319
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 02270e38-6887-481c-a5f9-657323491509
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: 43348580-30be-424c-a3e2-5297bba65818
+      m_outputSocketId: 72361ec9-624a-4869-9c75-3b7184926ef6
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: 44d756c2-bcb5-4dae-b17c-fa4fd9e5933d
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: 15b75fb6-0d98-4f28-b92f-3f4ccac851db
+      m_outputSocketId: 82a37864-e44d-4686-9f38-7374aec687e6
+    - m_inputConnectionPoint: {x: 202, y: 4}
+      m_outputConnectionPoint: {x: -2, y: 4}
+      m_id: e7b7a83f-30ae-45c0-848c-3ffbfe90856a
+      m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
+      m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
+      m_outputNodeId: 8f3a8b2b-df87-44be-a1ea-21d5fd3c103e
+      m_outputSocketId: 5a267107-daa4-4f2e-9e01-84755d176d87
     m_connectionPoints:
     - {x: -2, y: 4}
     - {x: 202, y: 4}
@@ -1828,7 +2523,7 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: e703a3e3-f2d6-4f14-9782-16eeef32bf18
+      m_id: 64c6a3c6-4282-4aec-a6da-25fcfb8f7d41
       m_inputNodeId: a3ef190a-b513-4115-8046-93e5479bc592
       m_inputSocketId: 8f353ba3-889e-4817-be26-44b0e27c0a25
       m_outputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
@@ -2075,7 +2770,7 @@ MonoBehaviour:
     m_connections:
     - m_inputConnectionPoint: {x: 202, y: 4}
       m_outputConnectionPoint: {x: -2, y: 4}
-      m_id: b41da35e-68af-4bbf-8f54-0c247182e1e1
+      m_id: 02270e38-6887-481c-a5f9-657323491509
       m_inputNodeId: 074356d2-cd6d-4e2f-86fa-b5e9ace61057
       m_inputSocketId: 98dd7d64-6ad3-41b8-b1b5-4833af4b1b07
       m_outputNodeId: 43348580-30be-424c-a3e2-5297bba65818
@@ -2118,16 +2813,16 @@ MonoBehaviour:
   m_onEnterShowViews:
   - Category: LevelUI
     InstantAction: 0
-    Name: PauseMenu
+    Name: BackgroundBlur
   - Category: LevelUI
     InstantAction: 0
-    Name: BackgroundBlur
+    Name: PauseMenu
   m_onEnterHideViews: []
   m_onExitShowViews: []
   m_onExitHideViews:
   - Category: LevelUI
     InstantAction: 0
-    Name: PauseMenu
+    Name: BackgroundBlur
   - Category: LevelUI
     InstantAction: 0
-    Name: BackgroundBlur
+    Name: PauseMenu

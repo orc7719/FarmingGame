@@ -19,7 +19,7 @@ public class InteractionScript : MonoBehaviour
 
     [SerializeField] Animator playerAnim = null;
 
-    AudioSource audioSource = null;
+   // AudioSource audioSource = null;
 
     [SerializeField] GameEvent clickEvent = null;
     [SerializeField] GameEvent clickInteractEvent = null;
@@ -30,7 +30,7 @@ public class InteractionScript : MonoBehaviour
         PlayerItem.Instance.DestroyItem();
         ai = GetComponent<AIPath>();
 
-        audioSource = GetComponent<AudioSource>();
+       // audioSource = GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -133,7 +133,7 @@ public class InteractionScript : MonoBehaviour
         if (PlayerItem.Instance.CurrentItem != null)
         {
             carryRend.sprite = PlayerItem.Instance.CurrentItem.itemSprite;
-            audioSource.PlayOneShot(PlayerItem.Instance.CurrentItem.pickupSound);
+            //audioSource.PlayOneShot(PlayerItem.Instance.CurrentItem.pickupSound);
             carryObject.SetActive(true);
         }
         else

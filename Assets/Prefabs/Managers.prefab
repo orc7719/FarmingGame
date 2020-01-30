@@ -2594,3 +2594,6 @@ MonoBehaviour:
   uiScene:
     sceneAsset: {fileID: 102900000, guid: 7d3f6bffaab27d645bc86b9265dffc78, type: 3}
     scenePath: Assets/Scenes/UI Scene.unity
+  loadingScene:
+    sceneAsset: {fileID: 102900000, guid: ddd59e3d7f5ea1f45b8894619214448b, type: 3}
+    scenePath: Assets/Scenes/LoadingScene.unity
