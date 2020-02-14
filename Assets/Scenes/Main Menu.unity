@@ -32863,7 +32863,7 @@ MonoBehaviour:
   AngleMultiplier: 1
   SpeedMultiplier: 1
   CurveScale: 50
-  hasUpdated: 1
+  hasUpdated: 0
 --- !u!222 &900461953
 CanvasRenderer:
   m_ObjectHideFlags: 0
