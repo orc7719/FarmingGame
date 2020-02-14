@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class SaveManager : Singleton<SaveManager>
 {
+    const string privateCode = "cB3Rm6gWdUWkj9_WpCQYowLctagzhtUEeGDlipzrRR_Q";
+    const string publicCode = "5e4678bdfe232612b829d9d2";
+    const string webURL = "http://dreamlo.com/lb/";
+
     [SerializeField]
     GameLevelCollection levelList;
+
+    private void Start()
+    {
+        LoadData();
+    }
 
     [ContextMenu("Save Game Data")]
     public void SaveData()
@@ -18,6 +27,17 @@ public class SaveManager : Singleton<SaveManager>
         }
 
         PlayerPrefs.Save();
+    }
+
+    public void SaveLevelData(GameLevel level)
+    {
+        string levelTag = level.levelId.ToString("000");
+        PlayerPrefs.SetInt("Level" + levelTag + "Completed", level.levelCompelted == true ? 1 : 0);
+        PlayerPrefs.SetInt("Level" + levelTag + "Time", level.personalBest);
+
+        PlayerPrefs.Save();
+
+        UploadNewScore(level, level.personalBest);
     }
 
     [ContextMenu("Load Game Data")]
@@ -35,5 +55,17 @@ public class SaveManager : Singleton<SaveManager>
     public void ResetData()
     {
         PlayerPrefs.DeleteAll();
+        LoadData();
+    }
+
+    public void UploadNewScore(GameLevel level, int score)
+    {
+        StartCoroutine(UploadHighscore(level.levelId.ToString("000"), score));
+    }
+
+    IEnumerator UploadHighscore(string levelID, int score)
+    {
+        WWW www = new WWW(webURL + privateCode + "/add/" + WWW.EscapeURL(levelID) + "/" + score);
+        yield return www;
     }
 }

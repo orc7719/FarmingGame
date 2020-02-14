@@ -970,7 +970,7 @@ PrefabInstance:
     - target: {fileID: 527602381345190384, guid: c58f56c3d8b23a944acf40638d723b31,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 527602381345190384, guid: c58f56c3d8b23a944acf40638d723b31,
         type: 3}
@@ -1254,7 +1254,7 @@ Transform:
   - {fileID: 721132050}
   - {fileID: 1685822904}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &502141187
 PrefabInstance:
@@ -1486,58 +1486,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &674910383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 674910385}
-  - component: {fileID: 674910384}
-  m_Layer: 0
-  m_Name: Level Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &674910384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674910383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a66486cfeeef4ac478fbb5b0c957ce9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelPaused: 0
-  tutorial: 0
-  gametimer: 240
-  completedOrders: 0
-  levelOrders:
-  - {fileID: 11400000, guid: 16756bf19ec784b44834a457497d031d, type: 2}
-  - {fileID: 11400000, guid: d55cfeb5ab6b2e148b79a3c26700ed22, type: 2}
-  - {fileID: 11400000, guid: a50c5e8f0296df647b2c02e866e1a988, type: 2}
-  currentOrder: []
---- !u!4 &674910385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674910383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11546421, y: 0.010588518, z: -1.8442383}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &685180969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1785,12 +1733,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 2281939127442234812, guid: 17d2566928d27f148a69509feb6a17a9,
-        type: 3}
-      propertyPath: _previouslyRegisteredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: bf752b65bcfc45741ad735aec48f53c8,
-        type: 2}
     - target: {fileID: 1201350856425695757, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1829,7 +1771,7 @@ PrefabInstance:
     - target: {fileID: 1201350856425695757, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1201350856425695757, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
@@ -1868,6 +1810,18 @@ PrefabInstance:
       propertyPath: levelOrders.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: a50c5e8f0296df647b2c02e866e1a988,
+        type: 2}
+    - target: {fileID: 1201350856425695756, guid: 17d2566928d27f148a69509feb6a17a9,
+        type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: e2e5ab620e1b0094db1f4e2313436955,
+        type: 2}
+    - target: {fileID: 2281939127442234812, guid: 17d2566928d27f148a69509feb6a17a9,
+        type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: bf752b65bcfc45741ad735aec48f53c8,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17d2566928d27f148a69509feb6a17a9, type: 3}
@@ -6041,7 +5995,7 @@ Transform:
   - {fileID: 19889811}
   - {fileID: 1052992531}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2008696957
 GameObject:
@@ -6320,7 +6274,7 @@ Transform:
   - {fileID: 2048575052}
   - {fileID: 85214790}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &2080897401
 Grid:

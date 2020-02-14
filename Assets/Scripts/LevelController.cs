@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : Singleton<LevelController>
 {
+    [SerializeField] GameLevel levelData;
     public bool levelPaused;
 
     bool levelPlaying = true;
@@ -64,6 +65,14 @@ public class LevelController : Singleton<LevelController>
         levelPlaying = false;
         Time.timeScale = 0;
         GameEventMessage.SendEvent("LevelComplete");
+
+        levelData.levelCompelted = true;
+        if (GetRemainingTime() < levelData.personalBest)
+            levelData.personalBest = GetRemainingTime();
+        SaveManager.Instance.SaveLevelData(levelData);
+
+        
+
         //UIController.Instance.ShowWinPanel();
     }
 

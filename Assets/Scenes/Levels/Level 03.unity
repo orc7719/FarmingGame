@@ -1333,12 +1333,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 2281939127442234812, guid: 17d2566928d27f148a69509feb6a17a9,
-        type: 3}
-      propertyPath: _previouslyRegisteredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: bf752b65bcfc45741ad735aec48f53c8,
-        type: 2}
     - target: {fileID: 1201350856425695757, guid: 17d2566928d27f148a69509feb6a17a9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1421,6 +1415,18 @@ PrefabInstance:
       propertyPath: levelOrders.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 59db50a09db00b94c87930dcdc126232,
+        type: 2}
+    - target: {fileID: 1201350856425695756, guid: 17d2566928d27f148a69509feb6a17a9,
+        type: 3}
+      propertyPath: levelData
+      value: 
+      objectReference: {fileID: 11400000, guid: c4f90568a0e7f7c47b48d0fbc60097d9,
+        type: 2}
+    - target: {fileID: 2281939127442234812, guid: 17d2566928d27f148a69509feb6a17a9,
+        type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: bf752b65bcfc45741ad735aec48f53c8,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17d2566928d27f148a69509feb6a17a9, type: 3}

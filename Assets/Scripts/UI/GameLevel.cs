@@ -13,5 +13,7 @@ public class GameLevel : ScriptableObject
     public SceneReferencePlus levelScene = null;
 
     public int personalBest = 0;
+    public int globalBest = 999;
     public bool levelCompelted = false;
+
 }

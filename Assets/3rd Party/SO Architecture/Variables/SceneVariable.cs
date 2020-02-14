@@ -77,14 +77,18 @@ namespace ScriptableObjectArchitecture
         }
         #endif
 
+        #pragma warning disable 0649
+
         [SerializeField]
-        private string _sceneName = null;
+        private string _sceneName;
 
         [SerializeField]
         private int _sceneIndex;
 
         [SerializeField]
         private bool _isSceneEnabled;
+
+        #pragma warning restore 0649
 
         public SceneInfo()
         {
