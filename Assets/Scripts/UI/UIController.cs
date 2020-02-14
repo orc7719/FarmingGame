@@ -87,7 +87,6 @@ public class UIController : Singleton<UIController>
     public void ShowWinPanel()
     {
         winTimeText.text = "Time Remaining:\n" + LevelController.Instance.GetRemainingTime().ToString("000") + " seconds";
-        winPanel.SetActive(true);
     }
 
     public void ShowLosePanel()

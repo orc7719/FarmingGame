@@ -71,7 +71,7 @@ public class LevelController : Singleton<LevelController>
             levelData.personalBest = GetRemainingTime();
         SaveManager.Instance.SaveLevelData(levelData);
 
-        
+        UIController.Instance.ShowWinPanel();
 
         //UIController.Instance.ShowWinPanel();
     }

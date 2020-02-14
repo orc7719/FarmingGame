@@ -17,6 +17,7 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
     [SerializeField] TMP_Text personalBestText = null;
     [SerializeField] GameObject playButton = null;
     [SerializeField] TMP_Text globalScoreText = null;
+    [SerializeField] GameObject scoreboard = null;
 
     [SerializeField] GameLevelCollection levelList = null;
 
@@ -24,6 +25,8 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
 
     void Start()
     {
+        scoreboard.SetActive(false);
+
         levelPreviewHolder.SetActive(false);
             playButton.SetActive(false);
     }
@@ -47,6 +50,7 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
 
     public void SelectNewLevel(SceneReferencePlus newLevel)
     {
+        scoreboard.SetActive(false);
         playButton.SetActive(newLevel != null);
         currentlySelectedLevel = newLevel;
         StopAllCoroutines();
@@ -60,6 +64,7 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
 
     public void UpdateScores(GameLevel level)
     {
+        scoreboard.SetActive(true);
         globalScoreText.text = "Global: " + level.globalBest.ToString("000");
 
         personalBestText.text = "Personal: "+level.personalBest.ToString("000");
