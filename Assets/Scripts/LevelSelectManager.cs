@@ -92,10 +92,10 @@ public class LevelSelectManager : Singleton<LevelSelectManager>
         string[] entryInfo = scoreStream.Split(new char[] { '|' });
         if (entryInfo.Length > 1)
         {
-            string score = entryInfo[1];
-            globalScoreText.text = "Global: " + score;
+            int score = int.Parse(entryInfo[1]);
+            globalScoreText.text = "Global: " + score.ToString("000");
 
-            level.globalBest = int.Parse(score);
+            level.globalBest = score;
         }
     }
 
